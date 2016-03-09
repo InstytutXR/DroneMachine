@@ -17,15 +17,13 @@ namespace DerelictComputer
         private double _waveformAmount;
         private double _phase;
         private double _phaseIncrement;
-        private double _phaseIncrementTarget;
-        private double _phaseInterpolateIncrement;
         private double _sampleDuration;
         private float _volume;
 
         public WavetableOscillator()
         {
             _phase = 0.0;
-            _phaseIncrement = 1;
+            _phaseIncrement = 0;
             _waveformAmount = 0f;
         }
 
@@ -38,7 +36,6 @@ namespace DerelictComputer
         public void Reset()
         {
             _phase = 0.0;
-            _phaseIncrementTarget = -1;
         }
 
         public void SetWaveformAmount(double waveformAmount)
@@ -46,18 +43,9 @@ namespace DerelictComputer
             _waveformAmount = waveformAmount;
         }
 
-        public void SetFrequency(double frequency, double interpolateTime)
+        public void SetFrequency(double frequency)
         {
-            if (interpolateTime > 0)
-            {
-                _phaseIncrementTarget = frequency*_sampleDuration;
-                var numSamples = interpolateTime/_sampleDuration;
-                _phaseInterpolateIncrement = (_phaseIncrementTarget - _phaseIncrement)/numSamples;
-            }
-            else
-            {
-                _phaseIncrement = frequency*_sampleDuration;
-            }
+            _phaseIncrement = frequency * _sampleDuration;
         }
 
         public void SetVolume(float volume)
@@ -67,8 +55,6 @@ namespace DerelictComputer
 
         public void ProcessBuffer(float[] buffer, int channels)
         {
-            double dspTime = AudioSettings.dspTime;
-
             for (int i = 0; i < buffer.Length; i += channels)
             {
                 float sample = (float) (GetSample()*_volume);
@@ -78,21 +64,7 @@ namespace DerelictComputer
                     buffer[i + j] += sample;
                 }
 
-                if (_phaseIncrementTarget > 0)
-                {
-                    _phaseIncrement += _phaseInterpolateIncrement;
-
-                    if ((_phaseInterpolateIncrement > 0 && _phaseIncrement > _phaseIncrementTarget) ||
-                        (_phaseInterpolateIncrement < 0 && _phaseIncrement < _phaseIncrementTarget))
-                    {
-                        _phaseIncrement = _phaseIncrementTarget;
-                        _phaseIncrementTarget = -1;
-                    }
-                }
-
                 UpdatePhase();
-
-                dspTime += _sampleDuration;
             }
         }
 

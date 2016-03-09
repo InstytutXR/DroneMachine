@@ -20,25 +20,23 @@ namespace DerelictComputer
         [SerializeField, Range(0f, 1f)] private double _osc2Tone = 0.5;
         [SerializeField, Range(0f, 1f)] private double _osc3Tone = 1;
 
-        private readonly WavetableOscillator Oscillator1 = new WavetableOscillator();
-        private readonly WavetableOscillator Oscillator2 = new WavetableOscillator();
-        private readonly WavetableOscillator Oscillator3 = new WavetableOscillator();
+        private readonly WavetableOscillator _oscillator1 = new WavetableOscillator();
+        private readonly WavetableOscillator _oscillator2 = new WavetableOscillator();
+        private readonly WavetableOscillator _oscillator3 = new WavetableOscillator();
 
         private double _sampleDuration;
         private double _lfoPhaseIncrement;
         private double _lfoPhase;
+        private double _targetFrequency;
 
         public void SetLfoFrequency(double frequency)
         {
             _lfoPhaseIncrement = frequency*_sampleDuration/_lfoCycleMultiplier;
         }
 
-        public void SetKeyAndScaleMode(MusicMathUtils.Note rootNote, MusicMathUtils.ScaleMode scaleMode, double interpolateTime)
+        public void SetKeyAndScaleMode(MusicMathUtils.Note rootNote, MusicMathUtils.ScaleMode scaleMode)
         {
-            double baseFrequency = MusicMathUtils.ScaleIntervalToFrequency(_scaleInterval, rootNote, scaleMode, _octave);
-            Oscillator1.SetFrequency(MusicMathUtils.SemitonesToPitch(_osc1Pitch) * baseFrequency, interpolateTime);
-            Oscillator2.SetFrequency(MusicMathUtils.SemitonesToPitch(_osc2Pitch) * baseFrequency, interpolateTime);
-            Oscillator3.SetFrequency(MusicMathUtils.SemitonesToPitch(_osc3Pitch) * baseFrequency, interpolateTime);
+            _targetFrequency = MusicMathUtils.ScaleIntervalToFrequency(_scaleInterval, rootNote, scaleMode, _octave);
         }
 
         private void Awake()
@@ -46,14 +44,14 @@ namespace DerelictComputer
             _lfoPhase = 0;
             _sampleDuration = 1.0/AudioSettings.outputSampleRate;
 
-            Oscillator1.Init();
-            Oscillator1.Reset();
+            _oscillator1.Init();
+            _oscillator1.Reset();
 
-            Oscillator2.Init();
-            Oscillator2.Reset();
+            _oscillator2.Init();
+            _oscillator2.Reset();
 
-            Oscillator3.Init();
-            Oscillator3.Reset();
+            _oscillator3.Init();
+            _oscillator3.Reset();
 
             // create a dummy clip and start playing it so 3d positioning works
             var dummyClip = AudioClip.Create("dummyclip", 1, 1, AudioSettings.outputSampleRate, false);
@@ -66,12 +64,12 @@ namespace DerelictComputer
 
         private void Update()
         {
-            Oscillator1.SetVolume(_osc1Volume);
-            Oscillator1.SetWaveformAmount(_osc1Tone);
-            Oscillator2.SetVolume(_osc2Volume);
-            Oscillator2.SetWaveformAmount(_osc2Tone);
-            Oscillator3.SetVolume(_osc3Volume);
-            Oscillator3.SetWaveformAmount(_osc3Tone);
+            _oscillator1.SetVolume(_osc1Volume);
+            _oscillator1.SetWaveformAmount(_osc1Tone);
+            _oscillator2.SetVolume(_osc2Volume);
+            _oscillator2.SetWaveformAmount(_osc2Tone);
+            _oscillator3.SetVolume(_osc3Volume);
+            _oscillator3.SetWaveformAmount(_osc3Tone);
         }
 
         private void OnAudioFilterRead(float[] buffer, int numChannels)
@@ -83,9 +81,9 @@ namespace DerelictComputer
                 tmpBuffer[i] = 0;
             }
 
-            Oscillator1.ProcessBuffer(tmpBuffer, numChannels);
-            Oscillator2.ProcessBuffer(tmpBuffer, numChannels);
-            Oscillator3.ProcessBuffer(tmpBuffer, numChannels);
+            _oscillator1.ProcessBuffer(tmpBuffer, numChannels);
+            _oscillator2.ProcessBuffer(tmpBuffer, numChannels);
+            _oscillator3.ProcessBuffer(tmpBuffer, numChannels);
 
             for (int i = 0; i < buffer.Length; i++)
             {
@@ -97,6 +95,14 @@ namespace DerelictComputer
                 if (_lfoPhase > 1)
                 {
                     _lfoPhase -= 1;
+                }
+
+                if (_targetFrequency > 0 && lfoVolume < 0.05)
+                {
+                    _oscillator1.SetFrequency(MusicMathUtils.SemitonesToPitch(_osc1Pitch) * _targetFrequency);
+                    _oscillator2.SetFrequency(MusicMathUtils.SemitonesToPitch(_osc2Pitch) * _targetFrequency);
+                    _oscillator3.SetFrequency(MusicMathUtils.SemitonesToPitch(_osc3Pitch) * _targetFrequency);
+                    _targetFrequency = -1;
                 }
 
                 buffer[i] *= tmpBuffer[i] * _mainVolume * (float)lfoVolume;

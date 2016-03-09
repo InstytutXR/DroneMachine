@@ -4,9 +4,9 @@ namespace DerelictComputer
 {
     public class DroneMachine : MonoBehaviour
     {
-        [SerializeField, Range(0.125f, 2f)] private double _frequency;
-        [SerializeField] private MusicMathUtils.Note _rootNote;
-        [SerializeField] private MusicMathUtils.ScaleMode _scaleMode;
+        [Range(0.125f, 2f)] public double Frequency;
+        public MusicMathUtils.Note RootNote = MusicMathUtils.Note.C;
+        public MusicMathUtils.ScaleMode ScaleMode = MusicMathUtils.ScaleMode.Ionian;
 
         private DroneSynth[] _synths;
         private MusicMathUtils.Note _lastRootNote;
@@ -19,20 +19,20 @@ namespace DerelictComputer
 
         private void Update()
         {
-            if (_rootNote != _lastRootNote || _scaleMode != _lastScaleMode)
+            if (RootNote != _lastRootNote || ScaleMode != _lastScaleMode)
             {
                 foreach (var droneSynth in _synths)
                 {
-                    droneSynth.SetKeyAndScaleMode(_rootNote, _scaleMode, 0.25);
+                    droneSynth.SetKeyAndScaleMode(RootNote, ScaleMode);
                 }
 
-                _lastRootNote = _rootNote;
-                _lastScaleMode = _scaleMode;
+                _lastRootNote = RootNote;
+                _lastScaleMode = ScaleMode;
             }
 
             foreach (var droneSynth in _synths)
             {
-                droneSynth.SetLfoFrequency(_frequency);
+                droneSynth.SetLfoFrequency(Frequency);
             }
         }
     }
