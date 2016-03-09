@@ -60,6 +60,8 @@ namespace DerelictComputer
             audioSource.clip = dummyClip;
             audioSource.loop = true;
             audioSource.Play();
+
+            DroneMachine.Instance.RegisterDroneSynth(this);
         }
 
         private void Update()

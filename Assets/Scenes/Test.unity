@@ -125,8 +125,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60f700d2c68b40b44a257677de749716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _triggerType: 3
   _rootNote: 2
   _scaleMode: 2
+  _frequency: 0.25
+  _frequencyChangeTime: 0
 --- !u!65 &9287090
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -169,49 +172,7 @@ Transform:
   - {fileID: 1072463985}
   - {fileID: 1171528423}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
---- !u!1 &200989417
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 200989419}
-  - 114: {fileID: 200989418}
-  m_Layer: 0
-  m_Name: DroneMachine
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &200989418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 200989417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 605ba0a910fd821498a190d7ff03bbe0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Frequency: 0.125
-  RootNote: 3
-  ScaleMode: 0
---- !u!4 &200989419
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 200989417}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2862835, y: 1.5396967, z: -9.146056}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 5
 --- !u!1 &450101089
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,6 +464,50 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 476189879}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &597060369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 597060370}
+  - 114: {fileID: 597060371}
+  m_Layer: 0
+  m_Name: KeyChanger(Start)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &597060370
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 597060369}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1172107867}
+  m_RootOrder: 6
+--- !u!114 &597060371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 597060369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60f700d2c68b40b44a257677de749716, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _triggerType: 1
+  _rootNote: 3
+  _scaleMode: 0
+  _frequency: 0.125
+  _frequencyChangeTime: 0
 --- !u!1 &657681013
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,8 +548,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60f700d2c68b40b44a257677de749716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _triggerType: 3
   _rootNote: 10
   _scaleMode: 4
+  _frequency: 0.25
+  _frequencyChangeTime: 0
 --- !u!65 &657681016
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -949,8 +957,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60f700d2c68b40b44a257677de749716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _triggerType: 3
   _rootNote: 3
   _scaleMode: 3
+  _frequency: 0.25
+  _frequencyChangeTime: 0
 --- !u!65 &1048127853
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1514,7 +1525,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1164805152}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.18168186, y: 0.22050567, z: -0.041844375, w: 0.95740175}
   m_LocalPosition: {x: 10.340499, y: 0, z: 2.551052}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1531,8 +1542,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60f700d2c68b40b44a257677de749716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _triggerType: 3
   _rootNote: 0
   _scaleMode: 5
+  _frequency: 0.25
+  _frequencyChangeTime: 0
 --- !u!65 &1164805155
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1543,7 +1557,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 2, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1171528422
 GameObject:
@@ -1752,8 +1766,9 @@ Transform:
   - {fileID: 657681014}
   - {fileID: 9287088}
   - {fileID: 1048127851}
+  - {fileID: 597060370}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &1225783514
 GameObject:
   m_ObjectHideFlags: 0
@@ -1784,7 +1799,7 @@ Transform:
   - {fileID: 773836783}
   - {fileID: 1105923749}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &1228333229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1815,7 +1830,7 @@ Transform:
   - {fileID: 476189880}
   - {fileID: 1668014505}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!1 &1229406212
 GameObject:
   m_ObjectHideFlags: 0
@@ -2269,8 +2284,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60f700d2c68b40b44a257677de749716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _triggerType: 3
   _rootNote: 5
   _scaleMode: 1
+  _frequency: 0.25
+  _frequencyChangeTime: 0
 --- !u!65 &1376228019
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2675,8 +2693,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60f700d2c68b40b44a257677de749716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _triggerType: 3
   _rootNote: 3
   _scaleMode: 0
+  _frequency: 0.25
+  _frequencyChangeTime: 0
 --- !u!65 &1736565931
 BoxCollider:
   m_ObjectHideFlags: 0
