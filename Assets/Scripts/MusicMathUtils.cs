@@ -5,47 +5,18 @@ namespace DerelictComputer
 {
 	public static class MusicMathUtils
 	{
-		public const int MidiNoteA440 = 69;
+        public enum Note { A, Bb, B, C, Db, D, Eb, E, F, Gb, G, Ab }
 
-		private static string[] _noteNames = {"C", "C#(Db)", "D", "D#(Eb)", "E", "F", "F#(Gb)", "G", "G#/Ab", "A", "A#(Bb)", "B"};
+        public enum ScaleMode { Ionian = 0, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, Locrian }
 
-		private static string[] _midiNoteNames;
+        public const double A0 = 27.5;
 
-		/// <summary>
-		/// A human readable list of MIDI note names, for use by the editor, mainly
-		/// </summary>
-		/// <value>The midi note names.</value>
-		public static string[] MidiNoteNames
-		{
-			get
-			{
-				if (_midiNoteNames == null)
-				{
-					_midiNoteNames = new string[128];
-
-					var octave = 0;
-
-					for (int noteNumber = 0; noteNumber < _midiNoteNames.Length; noteNumber += _noteNames.Length)
-					{
-						for (int noteName = 0; noteName < _noteNames.Length; noteName++)
-						{
-							_midiNoteNames[noteNumber + noteName] = _noteNames[noteName] + octave;
-						}
-
-						octave++;
-					}
-				}
-
-				return _midiNoteNames;
-			}
-		}
-
-		/// <summary>
-		/// Converts a semitone offset to a percentage pitch
-		/// </summary>
-		/// <param name="semitones">number of semitones from center</param>
-		/// <returns>percentage-based pitch</returns>
-		public static float SemitonesToPitch(float semitones)
+        /// <summary>
+        /// Converts a semitone offset to a percentage pitch
+        /// </summary>
+        /// <param name="semitones">number of semitones from center</param>
+        /// <returns>percentage-based pitch</returns>
+        public static float SemitonesToPitch(float semitones)
 		{
 			return Mathf.Pow(2f, semitones/12f);
 		}
@@ -68,14 +39,57 @@ namespace DerelictComputer
 	        return Mathf.Log(pitch, 2f)*12;
 	    }
 
-		/// <summary>
-		/// Converts a MIDI note number to a frequency, based on A 440
-		/// </summary>
-		/// <param name="midiNote">MIDI note number to convert</param>
-		/// <returns></returns>
-		public static float MidiNoteToFrequency(int midiNote)
-		{
-			return 440f*Mathf.Pow(2f, (midiNote - MidiNoteA440)/12f);
-		}
-	}
+	    public static double ScaleIntervalToFrequency(int interval, Note rootNote, ScaleMode mode, int octave)
+	    {
+	        if (interval < 1 || interval > 7)
+	        {
+	            Debug.LogError("Scale interval out of range: " + interval);
+	            return 0;
+	        }
+
+	        if (octave < 0)
+	        {
+	            Debug.LogError("Octave less than zero");
+	            return 0;
+	        }
+
+	        interval -= 1; // zero-index
+	        int ionianInterval = (interval + (int) mode)%7;
+
+	        int semitones;
+
+	        if (ionianInterval == 0)
+	        {
+	            semitones = 0;
+	        }
+            else if (ionianInterval == 1)
+            {
+                semitones = 2;
+            }
+            else if (ionianInterval == 2)
+            {
+                semitones = 4;
+            }
+            else if (ionianInterval == 3)
+            {
+                semitones = 5;
+            }
+            else if (ionianInterval == 4)
+            {
+                semitones = 7;
+            }
+            else if (ionianInterval == 5)
+            {
+                semitones = 9;
+            }
+            else// if (ionianInterval == 6)
+            {
+                semitones = 11;
+            }
+
+	        int notesFromA0 = octave*12 + semitones + (int)rootNote;
+
+	        return A0 *Math.Pow(2.0, notesFromA0/12.0);
+	    }
+    }
 }
