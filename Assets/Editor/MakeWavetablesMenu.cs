@@ -19,6 +19,8 @@ namespace DerelictComputer
                 return;
             }
 
+            AssetDatabase.Refresh();
+
             var audioClips = new List<AudioClip>();
 
             foreach (var filePath in Directory.GetFiles(path))
@@ -38,6 +40,8 @@ namespace DerelictComputer
             var file = File.Open(dataPath, FileMode.OpenOrCreate);
             formatter.Serialize(file, wavetableSets);
             file.Close();
+
+            AssetDatabase.Refresh();
         }
     }
 }
