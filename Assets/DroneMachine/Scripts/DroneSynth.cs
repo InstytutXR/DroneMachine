@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace DerelictComputer
+namespace DerelictComputer.DroneMachine
 {
     [RequireComponent(typeof(AudioSource))]
     public class DroneSynth : MonoBehaviour
@@ -149,7 +149,7 @@ namespace DerelictComputer
             audioSource.loop = true;
             audioSource.Play();
 
-            DroneMachine.Instance.RegisterDroneSynth(this);
+            DerelictComputer.DroneMachine.DroneMachine.Instance.RegisterDroneSynth(this);
         }
 
         private void Update()

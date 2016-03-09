@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace DerelictComputer
+namespace DerelictComputer.DroneMachine
 {
     public class KeyChanger : MonoBehaviour
     {
@@ -111,8 +111,8 @@ namespace DerelictComputer
 
         private void DoTrigger()
         {
-            DroneMachine.Instance.SetKey(_rootNote, _scaleMode);
-            DroneMachine.Instance.SetFrequency(_frequency, _frequencyChangeTime);
+            DerelictComputer.DroneMachine.DroneMachine.Instance.SetKey(_rootNote, _scaleMode);
+            DerelictComputer.DroneMachine.DroneMachine.Instance.SetFrequency(_frequency, _frequencyChangeTime);
         }
     }
 }

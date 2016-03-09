@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace DerelictComputer
+namespace DerelictComputer.DroneMachine
 {
 	public static class MusicMathUtils
 	{

@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Net.Mail;
 using UnityEngine;
 
-namespace DerelictComputer
+namespace DerelictComputer.DroneMachine
 {
     /// <summary>
     /// Utility for creating wavetables from time- or frequency-domain data

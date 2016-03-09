@@ -3,7 +3,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
-namespace DerelictComputer
+namespace DerelictComputer.DroneMachine
 {
     /// <summary>
     /// Container for wavetables used in WavetableOscillator

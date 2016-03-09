@@ -1,10 +1,9 @@
 ﻿#define INTERPOLATE_SAMPLES
 #define INTERPOLATE_WAVETABLES
 
-using System;
 using UnityEngine;
 
-namespace DerelictComputer
+namespace DerelictComputer.DroneMachine
 {
     /// <summary>
     /// Oscillator that reads from a collection of waveforms and can morph between them

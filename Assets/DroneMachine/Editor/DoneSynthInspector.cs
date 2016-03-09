@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace DerelictComputer
+namespace DerelictComputer.DroneMachine
 {
     [CustomEditor(typeof(DroneSynth)), CanEditMultipleObjects]
     public class DoneSynthInspector : Editor
