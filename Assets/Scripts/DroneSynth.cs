@@ -6,19 +6,20 @@ namespace DerelictComputer
     [RequireComponent(typeof(AudioSource))]
     public class DroneSynth : MonoBehaviour
     {
-        [SerializeField, Range(0.125f, 16f)] private double _lfoCycleMultiplier = 1;
-        [SerializeField, Range(1, 7)] private int _scaleInterval = 1;
-        [SerializeField, Range(0, 8)] private int _octave = 0;
-        [SerializeField, Range(0f, 1f)] private float _mainVolume = 1f;
-        [SerializeField, Range(0f, 1f)] private float _osc1Volume = 0.33f;
-        [SerializeField, Range(0f, 1f)] private float _osc2Volume = 0.33f;
-        [SerializeField, Range(0f, 1f)] private float _osc3Volume = 0.33f;
-        [SerializeField, Range(-12f, 12f)] private double _osc1Pitch = -0.5;
-        [SerializeField, Range(-12f, 12f)] private double _osc2Pitch = 0;
-        [SerializeField, Range(-12f, 12f)] private double _osc3Pitch = 0.5;
-        [SerializeField, Range(0f, 1f)] private double _osc1Tone = 0;
-        [SerializeField, Range(0f, 1f)] private double _osc2Tone = 0.5;
-        [SerializeField, Range(0f, 1f)] private double _osc3Tone = 1;
+        [SerializeField, HideInInspector] private bool _basicMode = true;
+        [SerializeField, HideInInspector] private double _lfoCycleMultiplier = 1;
+        [SerializeField, HideInInspector] private int _scaleInterval = 1;
+        [SerializeField, HideInInspector] private int _octave = 0;
+        [SerializeField, HideInInspector] private float _mainVolume = 1f;
+        [SerializeField, HideInInspector] private float _osc1Volume = 0.33f;
+        [SerializeField, HideInInspector] private float _osc2Volume = 0.33f;
+        [SerializeField, HideInInspector] private float _osc3Volume = 0.33f;
+        [SerializeField, HideInInspector] private double _osc1Pitch = -0.5;
+        [SerializeField, HideInInspector] private double _osc2Pitch = 0;
+        [SerializeField, HideInInspector] private double _osc3Pitch = 0.5;
+        [SerializeField, HideInInspector] private double _osc1Tone = 0;
+        [SerializeField, HideInInspector] private double _osc2Tone = 0.5;
+        [SerializeField, HideInInspector] private double _osc3Tone = 1;
 
         private readonly WavetableOscillator _oscillator1 = new WavetableOscillator();
         private readonly WavetableOscillator _oscillator2 = new WavetableOscillator();
@@ -28,6 +29,93 @@ namespace DerelictComputer
         private double _lfoPhaseIncrement;
         private double _lfoPhase;
         private double _targetFrequency;
+
+#if UNITY_EDITOR
+        // editor properties
+        public bool BasicMode
+        {
+            get { return _basicMode; }
+            set { _basicMode = value; }
+        }
+
+        public float LfoCycleMultiplier
+        {
+            get { return (float)_lfoCycleMultiplier; }
+            set { _lfoCycleMultiplier = value; }
+        }
+
+        public int ScaleInterval
+        {
+            get { return _scaleInterval; }
+            set { _scaleInterval = value; }
+        }
+
+        public int Octave
+        {
+            get { return _octave; }
+            set { _octave = value; }
+        }
+
+        public float MainVolume
+        {
+            get { return _mainVolume; }
+            set { _mainVolume = value; }
+        }
+
+        public float Osc1Volume
+        {
+            get { return _osc1Volume; }
+            set { _osc1Volume = value; }
+        }
+
+        public float Osc2Volume
+        {
+            get { return _osc2Volume; }
+            set { _osc2Volume = value; }
+        }
+
+        public float Osc3Volume
+        {
+            get { return _osc3Volume; }
+            set { _osc3Volume = value; }
+        }
+
+        public float Osc1Pitch
+        {
+            get { return (float)_osc1Pitch; }
+            set { _osc1Pitch = value; }
+        }
+
+        public float Osc2Pitch
+        {
+            get { return (float)_osc2Pitch; }
+            set { _osc2Pitch = value; }
+        }
+
+        public float Osc3Pitch
+        {
+            get { return (float) _osc3Pitch; }
+            set { _osc3Pitch = value; }
+        }
+
+        public float Osc1Tone
+        {
+            get { return (float)_osc1Tone; }
+            set { _osc1Tone = value; }
+        }
+
+        public float Osc2Tone
+        {
+            get { return (float) _osc2Tone; }
+            set { _osc2Tone = value; }
+        }
+
+        public float Osc3Tone
+        {
+            get { return (float) _osc3Tone; }
+            set { _osc3Tone = value; }
+        }
+#endif
 
         public void SetLfoFrequency(double frequency)
         {

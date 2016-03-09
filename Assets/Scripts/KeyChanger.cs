@@ -20,6 +20,7 @@ namespace DerelictComputer
 
         private Collider _collider;
 
+#if UNITY_EDITOR
         // properties for editor
         public MusicMathUtils.Note RootNote
         {
@@ -44,6 +45,7 @@ namespace DerelictComputer
             get { return (float)_frequencyChangeTime; }
             set { _frequencyChangeTime = value; }
         }
+#endif
 
         private void Awake()
         {

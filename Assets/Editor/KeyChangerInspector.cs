@@ -6,7 +6,6 @@ namespace DerelictComputer
     [CustomEditor(typeof(KeyChanger)), CanEditMultipleObjects]
     public class KeyChangerInspector : Editor
     {
-
         public override void OnInspectorGUI()
         {
             KeyChanger kc = (KeyChanger) target;
