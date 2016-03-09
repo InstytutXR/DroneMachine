@@ -95,14 +95,14 @@ namespace DerelictComputer
                 if (_lfoPhase > 1)
                 {
                     _lfoPhase -= 1;
-                }
 
-                if (_targetFrequency > 0 && lfoVolume < 0.05)
-                {
-                    _oscillator1.SetFrequency(MusicMathUtils.SemitonesToPitch(_osc1Pitch) * _targetFrequency);
-                    _oscillator2.SetFrequency(MusicMathUtils.SemitonesToPitch(_osc2Pitch) * _targetFrequency);
-                    _oscillator3.SetFrequency(MusicMathUtils.SemitonesToPitch(_osc3Pitch) * _targetFrequency);
-                    _targetFrequency = -1;
+                    if (_targetFrequency > 0)
+                    {
+                        _oscillator1.SetFrequency(MusicMathUtils.SemitonesToPitch(_osc1Pitch) * _targetFrequency);
+                        _oscillator2.SetFrequency(MusicMathUtils.SemitonesToPitch(_osc2Pitch) * _targetFrequency);
+                        _oscillator3.SetFrequency(MusicMathUtils.SemitonesToPitch(_osc3Pitch) * _targetFrequency);
+                        _targetFrequency = -1;
+                    }
                 }
 
                 buffer[i] *= tmpBuffer[i] * _mainVolume * (float)lfoVolume;
