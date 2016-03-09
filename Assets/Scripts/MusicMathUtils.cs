@@ -53,10 +53,38 @@ namespace DerelictComputer
 	            return 0;
 	        }
 
+	        int ionianRoot = (int) rootNote;
+
+	        switch (mode)
+	        {
+	            case ScaleMode.Ionian:
+	                break;
+	            case ScaleMode.Dorian:
+	                ionianRoot -= 2;
+	                break;
+	            case ScaleMode.Phrygian:
+                    ionianRoot -= 4;
+                    break;
+	            case ScaleMode.Lydian:
+                    ionianRoot -= 5;
+                    break;
+	            case ScaleMode.Mixolydian:
+                    ionianRoot -= 7;
+                    break;
+	            case ScaleMode.Aeolian:
+                    ionianRoot -= 9;
+                    break;
+	            case ScaleMode.Locrian:
+                    ionianRoot -= 11;
+                    break;
+	            default:
+	                throw new ArgumentOutOfRangeException("mode", mode, null);
+	        }
+
 	        interval -= 1; // zero-index
 	        int ionianInterval = (interval + (int) mode)%7;
-
-	        int semitones;
+	        int extraOctaves = (interval + (int) mode)/7;
+            int semitones;
 
 	        if (ionianInterval == 0)
 	        {
@@ -87,7 +115,7 @@ namespace DerelictComputer
                 semitones = 11;
             }
 
-	        int notesFromA0 = octave*12 + semitones + (int)rootNote;
+	        int notesFromA0 = (octave+extraOctaves)*12 + semitones + ionianRoot;
 
 	        return A0 *Math.Pow(2.0, notesFromA0/12.0);
 	    }

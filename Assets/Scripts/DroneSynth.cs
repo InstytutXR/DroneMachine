@@ -90,7 +90,7 @@ namespace DerelictComputer
             for (int i = 0; i < buffer.Length; i++)
             {
                 // get LFO volume
-                float lfoVolume = (float) (Math.Sin(_lfoPhase*Math.PI));
+                double lfoVolume = Math.Pow(Math.Abs(Math.Abs(_lfoPhase - 0.5) - 0.5)*2, 4);
 
                 _lfoPhase += _lfoPhaseIncrement;
 
@@ -99,7 +99,7 @@ namespace DerelictComputer
                     _lfoPhase -= 1;
                 }
 
-                buffer[i] *= tmpBuffer[i] * _mainVolume * lfoVolume;
+                buffer[i] *= tmpBuffer[i] * _mainVolume * (float)lfoVolume;
             }
         }
     }
