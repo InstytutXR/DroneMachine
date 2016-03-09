@@ -33,12 +33,12 @@ namespace DerelictComputer
             _lfoPhaseIncrement = frequency*_sampleDuration/_lfoCycleMultiplier;
         }
 
-        public void SetKeyAndScaleMode(MusicMathUtils.Note rootNote, MusicMathUtils.ScaleMode scaleMode)
+        public void SetKeyAndScaleMode(MusicMathUtils.Note rootNote, MusicMathUtils.ScaleMode scaleMode, double interpolateTime)
         {
             double baseFrequency = MusicMathUtils.ScaleIntervalToFrequency(_scaleInterval, rootNote, scaleMode, _octave);
-            Oscillator1.SetFrequency(MusicMathUtils.SemitonesToPitch(_osc1Pitch) * baseFrequency);
-            Oscillator2.SetFrequency(MusicMathUtils.SemitonesToPitch(_osc2Pitch) * baseFrequency);
-            Oscillator3.SetFrequency(MusicMathUtils.SemitonesToPitch(_osc3Pitch) * baseFrequency);
+            Oscillator1.SetFrequency(MusicMathUtils.SemitonesToPitch(_osc1Pitch) * baseFrequency, interpolateTime);
+            Oscillator2.SetFrequency(MusicMathUtils.SemitonesToPitch(_osc2Pitch) * baseFrequency, interpolateTime);
+            Oscillator3.SetFrequency(MusicMathUtils.SemitonesToPitch(_osc3Pitch) * baseFrequency, interpolateTime);
         }
 
         private void Awake()

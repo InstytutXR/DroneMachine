@@ -17,70 +17,54 @@ namespace DerelictComputer
         private double _waveformAmount;
         private double _phase;
         private double _phaseIncrement;
+        private double _phaseIncrementTarget;
+        private double _phaseInterpolateIncrement;
         private double _sampleDuration;
         private float _volume;
 
         public WavetableOscillator()
         {
             _phase = 0.0;
-            _phaseIncrement = 0.0;
+            _phaseIncrement = 1;
             _waveformAmount = 0f;
         }
 
-        /// <summary>
-        /// Call this before trying to do anything with the oscillator
-        /// </summary>
         public void Init()
         {
             _sampleDuration = 1.0 / AudioSettings.outputSampleRate;
             _wavetableSets = WavetableSet.GetWavetableSets();
         }
 
-        /// <summary>
-        /// Call this if you want to reset the oscillator between plays
-        /// such as when you want to start generating sound after prevously generating sound, which could cause a pop
-        /// </summary>
         public void Reset()
         {
             _phase = 0.0;
+            _phaseIncrementTarget = -1;
         }
 
-        /// <summary>
-        /// Sets the waveform(s) that should play, as well as how much morphing should happen
-        /// </summary>
-        /// <param name="waveformAmount">waveform morph amount (range 0-1)</param>
         public void SetWaveformAmount(double waveformAmount)
         {
             _waveformAmount = waveformAmount;
         }
 
-        /// <summary>
-        /// Set the frequency of the oscillator
-        /// NOTE: doing this at control rate (usually game frame rate) will result in perceived "stepping"
-        /// If you want smooth pitch modulation, it's recommended to modify this oscillator to use an envelope at audio rate
-        /// </summary>
-        /// <param name="frequency">frequency (Hz)</param>
-        public void SetFrequency(double frequency)
+        public void SetFrequency(double frequency, double interpolateTime)
         {
-            _phaseIncrement = frequency * _sampleDuration;
+            if (interpolateTime > 0)
+            {
+                _phaseIncrementTarget = frequency*_sampleDuration;
+                var numSamples = interpolateTime/_sampleDuration;
+                _phaseInterpolateIncrement = (_phaseIncrementTarget - _phaseIncrement)/numSamples;
+            }
+            else
+            {
+                _phaseIncrement = frequency*_sampleDuration;
+            }
         }
 
-        /// <summary>
-        /// Set the volume of the oscillator
-        /// NOTE: doing this at control rate (usually game frame rate) will result in perceived "stepping"
-        /// If you want smooth pitch modulation, it's recommended to modify this oscillator to use an envelope at audio rate
-        /// </summary>
-        /// <param name="volume">volume (range 0-1)</param>
         public void SetVolume(float volume)
         {
             _volume = volume;
         }
 
-        /// <summary>
-        /// Get oscillator output for an audio buffer
-        /// </summary>
-        /// <param name="buffer"></param>
-        /// <param name="channels"></param>
         public void ProcessBuffer(float[] buffer, int channels)
         {
             double dspTime = AudioSettings.dspTime;
@@ -92,6 +76,18 @@ namespace DerelictComputer
                 for (int j = 0; j < channels; j++)
                 {
                     buffer[i + j] += sample;
+                }
+
+                if (_phaseIncrementTarget > 0)
+                {
+                    _phaseIncrement += _phaseInterpolateIncrement;
+
+                    if ((_phaseInterpolateIncrement > 0 && _phaseIncrement > _phaseIncrementTarget) ||
+                        (_phaseInterpolateIncrement < 0 && _phaseIncrement < _phaseIncrementTarget))
+                    {
+                        _phaseIncrement = _phaseIncrementTarget;
+                        _phaseIncrementTarget = -1;
+                    }
                 }
 
                 UpdatePhase();
