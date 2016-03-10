@@ -460,15 +460,12 @@ MonoBehaviour:
   _scaleInterval: 3
   _octave: 4
   _mainVolume: 1
-  _osc1Volume: 0.33
-  _osc2Volume: 0.33
-  _osc3Volume: 0.33
-  _osc1Pitch: 0.05999999865889549
-  _osc2Pitch: -0.05999999865889549
-  _osc3Pitch: 0
-  _osc1Tone: 0.12099999934434891
-  _osc2Tone: 0.12099999934434891
-  _osc3Tone: 0.12099999934434891
+  _osc1Volume: 0.5
+  _osc2Volume: 0.5
+  _osc1Pitch: 0.10999999940395355
+  _osc2Pitch: 0
+  _osc1Tone: 0.6769999861717224
+  _osc2Tone: 0.6769999861717224
 --- !u!95 &231642060
 Animator:
   serializedVersion: 3
@@ -935,15 +932,12 @@ MonoBehaviour:
   _scaleInterval: 5
   _octave: 2
   _mainVolume: 1
-  _osc1Volume: 0.33
-  _osc2Volume: 0.33
-  _osc3Volume: 0.33
+  _osc1Volume: 0.5
+  _osc2Volume: 0.5
   _osc1Pitch: 12
-  _osc2Pitch: -12
-  _osc3Pitch: 0
-  _osc1Tone: 0.640999972820282
-  _osc2Tone: 0.640999972820282
-  _osc3Tone: 0.640999972820282
+  _osc2Pitch: 0
+  _osc1Tone: 0.4749999940395355
+  _osc2Tone: 0.4749999940395355
 --- !u!95 &486368977
 Animator:
   serializedVersion: 3
@@ -1074,7 +1068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60f700d2c68b40b44a257677de749716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _triggerType: 1
+  _triggerType: 0
   _rootNote: 3
   _scaleMode: 0
   _frequency: 0.25
@@ -1126,15 +1120,12 @@ MonoBehaviour:
   _scaleInterval: 3
   _octave: 2
   _mainVolume: 1
-  _osc1Volume: 0.33
-  _osc2Volume: 0.33
-  _osc3Volume: 0.33
-  _osc1Pitch: 5
-  _osc2Pitch: -5
-  _osc3Pitch: 0
-  _osc1Tone: 0.47999998927116394
-  _osc2Tone: 0.47999998927116394
-  _osc3Tone: 0.47999998927116394
+  _osc1Volume: 0.5
+  _osc2Volume: 0.5
+  _osc1Pitch: 0.20999999344348907
+  _osc2Pitch: 0
+  _osc1Tone: 0.4620000123977661
+  _osc2Tone: 0.4620000123977661
 --- !u!95 &503047710
 Animator:
   serializedVersion: 3
@@ -1488,7 +1479,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 666074368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20, y: 0, z: -20}
+  m_LocalPosition: {x: -10, y: 0, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 519130948}
@@ -1510,15 +1501,12 @@ MonoBehaviour:
   _scaleInterval: 1
   _octave: 0
   _mainVolume: 1
-  _osc1Volume: 0.33
-  _osc2Volume: 0.33
-  _osc3Volume: 0.33
-  _osc1Pitch: 0.05000000074505806
-  _osc2Pitch: -0.05000000074505806
-  _osc3Pitch: 0
-  _osc1Tone: 1
-  _osc2Tone: 1
-  _osc3Tone: 1
+  _osc1Volume: 0.5
+  _osc2Volume: 0.5
+  _osc1Pitch: 0.10999999940395355
+  _osc2Pitch: 0
+  _osc1Tone: 0.9300000071525574
+  _osc2Tone: 0.9300000071525574
 --- !u!82 &666074371
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1756,19 +1744,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _basicMode: 1
-  _lfoCycleMultiplier: 0.8600000143051147
-  _scaleInterval: 7
-  _octave: 4
+  _lfoCycleMultiplier: 1.190000057220459
+  _scaleInterval: 1
+  _octave: 5
   _mainVolume: 1
-  _osc1Volume: 0.33
-  _osc2Volume: 0.33
-  _osc3Volume: 0.33
-  _osc1Pitch: 0.15000000596046448
-  _osc2Pitch: -0.15000000596046448
-  _osc3Pitch: 0
-  _osc1Tone: 0.3310000002384186
-  _osc2Tone: 0.3310000002384186
-  _osc3Tone: 0.3310000002384186
+  _osc1Volume: 0.5
+  _osc2Volume: 0.5
+  _osc1Pitch: 0.05999999865889549
+  _osc2Pitch: 0
+  _osc1Tone: 0.3720000088214874
+  _osc2Tone: 0.3720000088214874
 --- !u!95 &816616266
 Animator:
   serializedVersion: 3
@@ -2430,15 +2415,12 @@ MonoBehaviour:
   _scaleInterval: 5
   _octave: 2
   _mainVolume: 1
-  _osc1Volume: 0.33
-  _osc2Volume: 0.33
-  _osc3Volume: 0.33
-  _osc1Pitch: 12
-  _osc2Pitch: -12
-  _osc3Pitch: 0
-  _osc1Tone: 0.640999972820282
-  _osc2Tone: 0.640999972820282
-  _osc3Tone: 0.640999972820282
+  _osc1Volume: 0.5
+  _osc2Volume: 0.5
+  _osc1Pitch: 7.03000020980835
+  _osc2Pitch: 0
+  _osc1Tone: 0.6150000095367432
+  _osc2Tone: 0.6150000095367432
 --- !u!95 &1012908755
 Animator:
   serializedVersion: 3
@@ -2577,15 +2559,12 @@ MonoBehaviour:
   _scaleInterval: 5
   _octave: 3
   _mainVolume: 1
-  _osc1Volume: 0.33
-  _osc2Volume: 0.33
-  _osc3Volume: 0.33
-  _osc1Pitch: 12
-  _osc2Pitch: -12
-  _osc3Pitch: 0
-  _osc1Tone: 0.08799999952316284
-  _osc2Tone: 0.08799999952316284
-  _osc3Tone: 0.08799999952316284
+  _osc1Volume: 0.5
+  _osc2Volume: 0.5
+  _osc1Pitch: 4.949999809265137
+  _osc2Pitch: 0
+  _osc1Tone: 1
+  _osc2Tone: 1
 --- !u!95 &1018386858
 Animator:
   serializedVersion: 3
@@ -2721,18 +2700,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _basicMode: 1
   _lfoCycleMultiplier: 5.800000190734863
-  _scaleInterval: 3
+  _scaleInterval: 5
   _octave: 2
   _mainVolume: 1
-  _osc1Volume: 0.33
-  _osc2Volume: 0.33
-  _osc3Volume: 0.33
-  _osc1Pitch: 5
-  _osc2Pitch: -5
-  _osc3Pitch: 0
-  _osc1Tone: 0.47999998927116394
-  _osc2Tone: 0.47999998927116394
-  _osc3Tone: 0.47999998927116394
+  _osc1Volume: 0.5
+  _osc2Volume: 0.5
+  _osc1Pitch: 12
+  _osc2Pitch: 0
+  _osc1Tone: 0.5199999809265137
+  _osc2Tone: 0.5199999809265137
 --- !u!95 &1031744618
 Animator:
   serializedVersion: 3
@@ -2970,7 +2946,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1264516500}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 15}
+  m_LocalPosition: {x: 0, y: 8.37, z: 15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 121591746}
@@ -2988,19 +2964,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _basicMode: 1
-  _lfoCycleMultiplier: 1.1200000047683716
+  _lfoCycleMultiplier: 8.140000343322754
   _scaleInterval: 7
   _octave: 4
   _mainVolume: 1
-  _osc1Volume: 0.33
-  _osc2Volume: 0.33
-  _osc3Volume: 0.33
-  _osc1Pitch: 0.15000000596046448
-  _osc2Pitch: -0.15000000596046448
-  _osc3Pitch: 0
-  _osc1Tone: 0.3310000002384186
-  _osc2Tone: 0.3310000002384186
-  _osc3Tone: 0.3310000002384186
+  _osc1Volume: 0.5
+  _osc2Volume: 0.5
+  _osc1Pitch: 7
+  _osc2Pitch: 0
+  _osc1Tone: 0.35899999737739563
+  _osc2Tone: 0.35899999737739563
 --- !u!95 &1264516503
 Animator:
   serializedVersion: 3
@@ -3178,7 +3151,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1303317325}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: 0, z: 20}
+  m_LocalPosition: {x: 10, y: 0, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1908941578}
@@ -3200,15 +3173,12 @@ MonoBehaviour:
   _scaleInterval: 1
   _octave: 0
   _mainVolume: 1
-  _osc1Volume: 0.33
-  _osc2Volume: 0.33
-  _osc3Volume: 0.33
-  _osc1Pitch: 0.05000000074505806
-  _osc2Pitch: -0.05000000074505806
-  _osc3Pitch: 0
-  _osc1Tone: 0.574999988079071
-  _osc2Tone: 0.574999988079071
-  _osc3Tone: 0.574999988079071
+  _osc1Volume: 0.5
+  _osc2Volume: 0.5
+  _osc1Pitch: 0.10999999940395355
+  _osc2Pitch: 0
+  _osc1Tone: 1
+  _osc2Tone: 1
 --- !u!82 &1303317328
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3330,15 +3300,12 @@ MonoBehaviour:
   _scaleInterval: 5
   _octave: 3
   _mainVolume: 1
-  _osc1Volume: 0.33
-  _osc2Volume: 0.33
-  _osc3Volume: 0.33
-  _osc1Pitch: 12
-  _osc2Pitch: -12
-  _osc3Pitch: 0
-  _osc1Tone: 0.08799999952316284
-  _osc2Tone: 0.08799999952316284
-  _osc3Tone: 0.08799999952316284
+  _osc1Volume: 0.5
+  _osc2Volume: 0.5
+  _osc1Pitch: 11.899999618530273
+  _osc2Pitch: 0
+  _osc1Tone: 0.8009999990463257
+  _osc2Tone: 0.8009999990463257
 --- !u!95 &1344348649
 Animator:
   serializedVersion: 3
@@ -4129,7 +4096,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1708647335}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: 0, z: -20}
+  m_LocalPosition: {x: 10, y: 0, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 477696938}
@@ -4151,15 +4118,12 @@ MonoBehaviour:
   _scaleInterval: 1
   _octave: 1
   _mainVolume: 1
-  _osc1Volume: 0.33
-  _osc2Volume: 0.33
-  _osc3Volume: 0.33
-  _osc1Pitch: 0.05000000074505806
-  _osc2Pitch: -0.05000000074505806
-  _osc3Pitch: 0
-  _osc1Tone: 0.26100000739097595
-  _osc2Tone: 0.26100000739097595
-  _osc3Tone: 0.26100000739097595
+  _osc1Volume: 0.5
+  _osc2Volume: 0.5
+  _osc1Pitch: 0.1599999964237213
+  _osc2Pitch: 0
+  _osc1Tone: 0.3720000088214874
+  _osc2Tone: 0.3720000088214874
 --- !u!82 &1708647338
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4290,7 +4254,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1808174383}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -15}
+  m_LocalPosition: {x: 0, y: 8.37, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 982246349}
@@ -4312,15 +4276,12 @@ MonoBehaviour:
   _scaleInterval: 7
   _octave: 6
   _mainVolume: 1
-  _osc1Volume: 0.33
-  _osc2Volume: 0.33
-  _osc3Volume: 0.33
-  _osc1Pitch: 0.05999999865889549
-  _osc2Pitch: -0.05999999865889549
-  _osc3Pitch: 0
-  _osc1Tone: 0
-  _osc2Tone: 0
-  _osc3Tone: 0
+  _osc1Volume: 0.5
+  _osc2Volume: 0.5
+  _osc1Pitch: 7.099999904632568
+  _osc2Pitch: 0
+  _osc1Tone: 0.9549999833106995
+  _osc2Tone: 0.9549999833106995
 --- !u!95 &1808174386
 Animator:
   serializedVersion: 3
@@ -4698,18 +4659,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _basicMode: 1
   _lfoCycleMultiplier: 16
-  _scaleInterval: 7
+  _scaleInterval: 1
   _octave: 6
   _mainVolume: 1
-  _osc1Volume: 0.33
-  _osc2Volume: 0.33
-  _osc3Volume: 0.33
+  _osc1Volume: 0.5
+  _osc2Volume: 0.5
   _osc1Pitch: 0.05999999865889549
-  _osc2Pitch: -0.05999999865889549
-  _osc3Pitch: 0
-  _osc1Tone: 0
-  _osc2Tone: 0
-  _osc3Tone: 0
+  _osc2Pitch: 0
+  _osc1Tone: 1
+  _osc2Tone: 1
 --- !u!95 &1910418866
 Animator:
   serializedVersion: 3
@@ -4845,18 +4803,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _basicMode: 1
   _lfoCycleMultiplier: 8.130000114440918
-  _scaleInterval: 3
+  _scaleInterval: 5
   _octave: 4
   _mainVolume: 1
-  _osc1Volume: 0.33
-  _osc2Volume: 0.33
-  _osc3Volume: 0.33
-  _osc1Pitch: 0.05999999865889549
-  _osc2Pitch: -0.05999999865889549
-  _osc3Pitch: 0
-  _osc1Tone: 0.12099999934434891
-  _osc2Tone: 0.12099999934434891
-  _osc3Tone: 0.12099999934434891
+  _osc1Volume: 0.5
+  _osc2Volume: 0.5
+  _osc1Pitch: 11.949999809265137
+  _osc2Pitch: 0
+  _osc1Tone: 0.6729999780654907
+  _osc2Tone: 0.6729999780654907
 --- !u!95 &1923927374
 Animator:
   serializedVersion: 3
@@ -4972,7 +4927,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1924701812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20, y: 0, z: 20}
+  m_LocalPosition: {x: -10, y: 0, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 465573428}
@@ -4994,15 +4949,12 @@ MonoBehaviour:
   _scaleInterval: 1
   _octave: 1
   _mainVolume: 1
-  _osc1Volume: 0.33
-  _osc2Volume: 0.33
-  _osc3Volume: 0.33
-  _osc1Pitch: 0.05000000074505806
-  _osc2Pitch: -0.05000000074505806
-  _osc3Pitch: 0
-  _osc1Tone: 1
-  _osc2Tone: 1
-  _osc3Tone: 1
+  _osc1Volume: 0.5
+  _osc2Volume: 0.5
+  _osc1Pitch: 0.05999999865889549
+  _osc2Pitch: 0
+  _osc1Tone: 0.3720000088214874
+  _osc2Tone: 0.3720000088214874
 --- !u!82 &1924701815
 AudioSource:
   m_ObjectHideFlags: 0

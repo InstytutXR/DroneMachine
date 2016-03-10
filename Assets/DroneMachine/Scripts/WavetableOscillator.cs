@@ -52,19 +52,18 @@ namespace DerelictComputer.DroneMachine
             _volume = volume;
         }
 
-        public void ProcessBuffer(float[] buffer, int channels)
+        public void GetSampleAndUpdatePhase(ref float sample, bool additive = true)
         {
-            for (int i = 0; i < buffer.Length; i += channels)
+            if (additive)
             {
-                float sample = (float) (GetSample()*_volume);
-
-                for (int j = 0; j < channels; j++)
-                {
-                    buffer[i + j] += sample;
-                }
-
-                UpdatePhase();
+                sample += GetSample()*_volume;
             }
+            else
+            {
+                sample = GetSample() * _volume;
+            }
+
+            UpdatePhase();
         }
 
         private void UpdatePhase()
@@ -138,7 +137,7 @@ namespace DerelictComputer.DroneMachine
             return (float)(s0 + (s1 - s0) * sIdxFrac);
 #else
             // truncate
-            return wavetable.Table[(int)(phase * wavetable.Table.Length)];
+            return wavetable.Table[(int)(_phase * wavetable.Table.Length)];
 #endif
         }
     }

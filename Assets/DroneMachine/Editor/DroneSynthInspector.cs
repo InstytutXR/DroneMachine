@@ -13,13 +13,10 @@ namespace DerelictComputer.DroneMachine
         private SerializedProperty _mainVolume;
         private SerializedProperty _osc1Volume;
         private SerializedProperty _osc2Volume;
-        private SerializedProperty _osc3Volume;
         private SerializedProperty _osc1Pitch;
         private SerializedProperty _osc2Pitch;
-        private SerializedProperty _osc3Pitch;
         private SerializedProperty _osc1Tone;
         private SerializedProperty _osc2Tone;
-        private SerializedProperty _osc3Tone;
 
         private void OnEnable()
         {
@@ -30,13 +27,10 @@ namespace DerelictComputer.DroneMachine
             _mainVolume = serializedObject.FindProperty("_mainVolume");
             _osc1Volume = serializedObject.FindProperty("_osc1Volume");
             _osc2Volume = serializedObject.FindProperty("_osc2Volume");
-            _osc3Volume = serializedObject.FindProperty("_osc3Volume");
             _osc1Pitch = serializedObject.FindProperty("_osc1Pitch");
             _osc2Pitch = serializedObject.FindProperty("_osc2Pitch");
-            _osc3Pitch = serializedObject.FindProperty("_osc3Pitch");
             _osc1Tone = serializedObject.FindProperty("_osc1Tone");
             _osc2Tone = serializedObject.FindProperty("_osc2Tone");
-            _osc3Tone = serializedObject.FindProperty("_osc3Tone");
         }
 
         public override void OnInspectorGUI()
@@ -54,7 +48,6 @@ namespace DerelictComputer.DroneMachine
             EditorGUILayout.Slider(_mainVolume, 0f, 1f, "Main Volume");
             EditorGUILayout.Slider(_osc1Volume, 0f, 1f, "Oscillator 1 Volume");
             EditorGUILayout.Slider(_osc2Volume, 0f, 1f, "Oscillator 2 Volume");
-            EditorGUILayout.Slider(_osc3Volume, 0f, 1f, "Oscillator 3 Volume");
 
             EditorGUILayout.Space();
 
@@ -69,7 +62,6 @@ namespace DerelictComputer.DroneMachine
                 {
                     _osc1Tone.doubleValue = tone;
                     _osc2Tone.doubleValue = tone;
-                    _osc3Tone.doubleValue = tone;
                 }
 
                 float detune = Mathf.Clamp((float)_osc1Pitch.doubleValue, 0f, 12f);
@@ -78,21 +70,18 @@ namespace DerelictComputer.DroneMachine
                 if (GUI.changed)
                 {
                     _osc1Pitch.doubleValue = detune;
-                    _osc2Pitch.doubleValue = -detune;
-                    _osc3Pitch.doubleValue = 0;
+                    _osc2Pitch.doubleValue = 0;
                 }
             }
             else
             {
                 EditorGUILayout.Slider(_osc1Tone, 0f, 1f, "Oscillator 1 Tone");
                 EditorGUILayout.Slider(_osc2Tone, 0f, 1f, "Oscillator 2 Tone");
-                EditorGUILayout.Slider(_osc3Tone, 0f, 1f, "Oscillator 3 Tone");
 
                 EditorGUILayout.Space();
 
                 EditorGUILayout.Slider(_osc1Pitch, -12f, 12f, "Oscillator 1 Pitch");
                 EditorGUILayout.Slider(_osc2Pitch, -12f, 12f, "Oscillator 2 Pitch");
-                EditorGUILayout.Slider(_osc3Pitch, -12f, 12f, "Oscillator 3 Pitch");
             }
 
             if (GUI.changed)

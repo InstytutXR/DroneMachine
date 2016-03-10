@@ -31,6 +31,8 @@ namespace DerelictComputer.DroneMachine
         private double _frequencyChangeTimeElapsed;
         private double _frequencyChangeTimeTotal;
         private double _currentFrequency;
+        private MusicMathUtils.Note _currentRootNote;
+        private MusicMathUtils.ScaleMode _currentScaleMode;
 
         /// <summary>
         /// Register a DroneSynth to get updates from this DroneMachine
@@ -45,6 +47,9 @@ namespace DerelictComputer.DroneMachine
             }
 
             _synths.Add(synth);
+
+            synth.SetKeyAndScaleMode(_currentRootNote, _currentScaleMode);
+            synth.SetLfoFrequency(_currentFrequency);
         }
 
         /// <summary>
@@ -58,6 +63,9 @@ namespace DerelictComputer.DroneMachine
             {
                 _synths[i].SetKeyAndScaleMode(rootNote, scaleMode);
             }
+
+            _currentRootNote = rootNote;
+            _currentScaleMode = scaleMode;
         }
 
         /// <summary>
