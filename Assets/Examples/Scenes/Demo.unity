@@ -122,14 +122,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 12719598}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60f700d2c68b40b44a257677de749716, type: 3}
+  m_Script: {fileID: 32960973, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _triggerType: 3
   _rootNote: 10
   _scaleMode: 4
-  _frequency: 0.2199999988079071
-  _frequencyChangeTime: 1.3200000524520874
+  _frequency: 0.47999998927116394
+  _frequencyChangeTime: 2.7699999809265137
 --- !u!65 &12719601
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -211,14 +211,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 99989209}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60f700d2c68b40b44a257677de749716, type: 3}
+  m_Script: {fileID: 32960973, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _triggerType: 3
   _rootNote: 8
   _scaleMode: 3
-  _frequency: 0.41999998688697815
-  _frequencyChangeTime: 5.449999809265137
+  _frequency: 0.5099999904632568
+  _frequencyChangeTime: 2.319999933242798
 --- !u!65 &99989212
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -511,20 +511,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 231642057}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfa8cd35b4bbfbf4fab719d4b12b4cef, type: 3}
+  m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _basicMode: 1
-  _lfoCycleMultiplier: 8
+  _lfoCycleMultiplier: 4
   _scaleInterval: 3
-  _octave: 4
+  _octave: 5
   _mainVolume: 1
   _osc1Volume: 0.5
   _osc2Volume: 0.5
-  _osc1Pitch: 0.10999999940395355
+  _osc1Pitch: 3.0999999046325684
   _osc2Pitch: 0
-  _osc1Tone: 0.6769999861717224
-  _osc2Tone: 0.6769999861717224
+  _osc1Tone: 1
+  _osc2Tone: 1
 --- !u!95 &231642060
 Animator:
   serializedVersion: 3
@@ -654,14 +654,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 312437334}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60f700d2c68b40b44a257677de749716, type: 3}
+  m_Script: {fileID: 32960973, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _triggerType: 3
   _rootNote: 3
   _scaleMode: 0
   _frequency: 0.25
-  _frequencyChangeTime: 0.9100000262260437
+  _frequencyChangeTime: 3.8399999141693115
 --- !u!65 &312437337
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -983,19 +983,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 486368974}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfa8cd35b4bbfbf4fab719d4b12b4cef, type: 3}
+  m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _basicMode: 0
+  _basicMode: 1
   _lfoCycleMultiplier: 3
   _scaleInterval: 5
-  _octave: 2
+  _octave: 1
   _mainVolume: 1
   _osc1Volume: 0.5
   _osc2Volume: 0.5
-  _osc1Pitch: 0.10999999940395355
+  _osc1Pitch: 5
   _osc2Pitch: 0
-  _osc1Tone: 0.296999990940094
+  _osc1Tone: 1
   _osc2Tone: 1
 --- !u!95 &486368977
 Animator:
@@ -1125,10 +1125,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 496850972}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60f700d2c68b40b44a257677de749716, type: 3}
+  m_Script: {fileID: 32960973, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _triggerType: 0
+  _triggerType: 1
   _rootNote: 3
   _scaleMode: 0
   _frequency: 0.25
@@ -1172,20 +1172,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 503047707}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfa8cd35b4bbfbf4fab719d4b12b4cef, type: 3}
+  m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _basicMode: 1
-  _lfoCycleMultiplier: 6
+  _lfoCycleMultiplier: 5
   _scaleInterval: 3
   _octave: 2
   _mainVolume: 1
   _osc1Volume: 0.5
   _osc2Volume: 0.5
-  _osc1Pitch: 0.20999999344348907
+  _osc1Pitch: 11.890000343322754
   _osc2Pitch: 0
-  _osc1Tone: 0.4620000123977661
-  _osc2Tone: 0.4620000123977661
+  _osc1Tone: 0.19499999284744263
+  _osc2Tone: 0.19499999284744263
 --- !u!95 &503047710
 Animator:
   serializedVersion: 3
@@ -1571,20 +1571,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 666074368}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfa8cd35b4bbfbf4fab719d4b12b4cef, type: 3}
+  m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _basicMode: 1
-  _lfoCycleMultiplier: 2.130000114440918
+  _lfoCycleMultiplier: 2
   _scaleInterval: 1
-  _octave: 0
+  _octave: 1
   _mainVolume: 1
   _osc1Volume: 0.5
   _osc2Volume: 0.5
-  _osc1Pitch: 0.10999999940395355
+  _osc1Pitch: 0.15000000596046448
   _osc2Pitch: 0
-  _osc1Tone: 0.9300000071525574
-  _osc2Tone: 0.9300000071525574
+  _osc1Tone: 0.10400000214576721
+  _osc2Tone: 0.10400000214576721
 --- !u!82 &666074371
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1822,20 +1822,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 816616263}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfa8cd35b4bbfbf4fab719d4b12b4cef, type: 3}
+  m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _basicMode: 1
-  _lfoCycleMultiplier: 1.190000057220459
-  _scaleInterval: 1
-  _octave: 5
+  _lfoCycleMultiplier: 0.4099999964237213
+  _scaleInterval: 7
+  _octave: 4
   _mainVolume: 1
   _osc1Volume: 0.5
   _osc2Volume: 0.5
-  _osc1Pitch: 0.05999999865889549
+  _osc1Pitch: 0
   _osc2Pitch: 0
-  _osc1Tone: 0.3720000088214874
-  _osc2Tone: 0.3720000088214874
+  _osc1Tone: 0.5609999895095825
+  _osc2Tone: 0.5609999895095825
 --- !u!95 &816616266
 Animator:
   serializedVersion: 3
@@ -2308,20 +2308,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1012908752}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfa8cd35b4bbfbf4fab719d4b12b4cef, type: 3}
+  m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _basicMode: 1
-  _lfoCycleMultiplier: 3.5199999809265137
+  _lfoCycleMultiplier: 3.259999990463257
   _scaleInterval: 5
-  _octave: 2
+  _octave: 1
   _mainVolume: 1
   _osc1Volume: 0.5
   _osc2Volume: 0.5
-  _osc1Pitch: 7.03000020980835
+  _osc1Pitch: 5
   _osc2Pitch: 0
-  _osc1Tone: 0.6150000095367432
-  _osc2Tone: 0.6150000095367432
+  _osc1Tone: 1
+  _osc2Tone: 1
 --- !u!95 &1012908755
 Animator:
   serializedVersion: 3
@@ -2453,20 +2453,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1018386855}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfa8cd35b4bbfbf4fab719d4b12b4cef, type: 3}
+  m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _basicMode: 1
-  _lfoCycleMultiplier: 5.329999923706055
+  _lfoCycleMultiplier: 0.8600000143051147
   _scaleInterval: 5
-  _octave: 3
+  _octave: 2
   _mainVolume: 1
   _osc1Volume: 0.5
   _osc2Volume: 0.5
-  _osc1Pitch: 4.949999809265137
+  _osc1Pitch: 0.10000000149011612
   _osc2Pitch: 0
-  _osc1Tone: 1
-  _osc2Tone: 1
+  _osc1Tone: 0.27300000190734863
+  _osc2Tone: 0.27300000190734863
 --- !u!95 &1018386858
 Animator:
   serializedVersion: 3
@@ -2671,20 +2671,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1031744615}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfa8cd35b4bbfbf4fab719d4b12b4cef, type: 3}
+  m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _basicMode: 1
-  _lfoCycleMultiplier: 5.800000190734863
-  _scaleInterval: 5
+  _lfoCycleMultiplier: 6
+  _scaleInterval: 3
   _octave: 2
   _mainVolume: 1
   _osc1Volume: 0.5
   _osc2Volume: 0.5
-  _osc1Pitch: 12
+  _osc1Pitch: 11.890000343322754
   _osc2Pitch: 0
-  _osc1Tone: 0.5199999809265137
-  _osc2Tone: 0.5199999809265137
+  _osc1Tone: 0.19499999284744263
+  _osc2Tone: 0.19499999284744263
 --- !u!95 &1031744618
 Animator:
   serializedVersion: 3
@@ -2937,20 +2937,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1264516500}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfa8cd35b4bbfbf4fab719d4b12b4cef, type: 3}
+  m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _basicMode: 1
-  _lfoCycleMultiplier: 8.140000343322754
-  _scaleInterval: 7
-  _octave: 4
+  _lfoCycleMultiplier: 12.380000114440918
+  _scaleInterval: 1
+  _octave: 5
   _mainVolume: 1
   _osc1Volume: 0.5
   _osc2Volume: 0.5
-  _osc1Pitch: 7
+  _osc1Pitch: 11.890000343322754
   _osc2Pitch: 0
-  _osc1Tone: 0.35899999737739563
-  _osc2Tone: 0.35899999737739563
+  _osc1Tone: 0.21899999678134918
+  _osc2Tone: 0.21899999678134918
 --- !u!95 &1264516503
 Animator:
   serializedVersion: 3
@@ -3143,20 +3143,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1303317325}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfa8cd35b4bbfbf4fab719d4b12b4cef, type: 3}
+  m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _basicMode: 1
   _lfoCycleMultiplier: 2
   _scaleInterval: 1
-  _octave: 0
+  _octave: 1
   _mainVolume: 1
   _osc1Volume: 0.5
   _osc2Volume: 0.5
-  _osc1Pitch: 0.10999999940395355
+  _osc1Pitch: 0.15000000596046448
   _osc2Pitch: 0
-  _osc1Tone: 1
-  _osc2Tone: 1
+  _osc1Tone: 0.10400000214576721
+  _osc2Tone: 0.10400000214576721
 --- !u!82 &1303317328
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3271,20 +3271,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1344348646}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfa8cd35b4bbfbf4fab719d4b12b4cef, type: 3}
+  m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _basicMode: 1
-  _lfoCycleMultiplier: 5
+  _lfoCycleMultiplier: 0.6000000238418579
   _scaleInterval: 5
-  _octave: 3
+  _octave: 2
   _mainVolume: 1
   _osc1Volume: 0.5
   _osc2Volume: 0.5
-  _osc1Pitch: 11.899999618530273
+  _osc1Pitch: 0.10000000149011612
   _osc2Pitch: 0
-  _osc1Tone: 0.3019999861717224
-  _osc2Tone: 0.3019999861717224
+  _osc1Tone: 0.27300000190734863
+  _osc2Tone: 0.27300000190734863
 --- !u!95 &1344348649
 Animator:
   serializedVersion: 3
@@ -3718,20 +3718,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1708647335}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfa8cd35b4bbfbf4fab719d4b12b4cef, type: 3}
+  m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _basicMode: 1
-  _lfoCycleMultiplier: 1.2000000476837158
+  _lfoCycleMultiplier: 1
   _scaleInterval: 1
-  _octave: 1
+  _octave: 0
   _mainVolume: 1
   _osc1Volume: 0.5
   _osc2Volume: 0.5
-  _osc1Pitch: 0.1599999964237213
+  _osc1Pitch: 12
   _osc2Pitch: 0
-  _osc1Tone: 0.3720000088214874
-  _osc2Tone: 0.3720000088214874
+  _osc1Tone: 0.4959999918937683
+  _osc2Tone: 0.4959999918937683
 --- !u!82 &1708647338
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3877,20 +3877,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1808174383}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfa8cd35b4bbfbf4fab719d4b12b4cef, type: 3}
+  m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _basicMode: 1
-  _lfoCycleMultiplier: 15.739999771118164
-  _scaleInterval: 7
-  _octave: 6
+  _lfoCycleMultiplier: 16
+  _scaleInterval: 1
+  _octave: 5
   _mainVolume: 1
   _osc1Volume: 0.5
   _osc2Volume: 0.5
-  _osc1Pitch: 7.099999904632568
+  _osc1Pitch: 7
   _osc2Pitch: 0
-  _osc1Tone: 0.9549999833106995
-  _osc2Tone: 0.9549999833106995
+  _osc1Tone: 1
+  _osc2Tone: 1
 --- !u!95 &1808174386
 Animator:
   serializedVersion: 3
@@ -4202,20 +4202,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1910418863}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfa8cd35b4bbfbf4fab719d4b12b4cef, type: 3}
+  m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _basicMode: 1
-  _lfoCycleMultiplier: 16
-  _scaleInterval: 1
-  _octave: 6
+  _lfoCycleMultiplier: 2.690000057220459
+  _scaleInterval: 7
+  _octave: 4
   _mainVolume: 1
   _osc1Volume: 0.5
   _osc2Volume: 0.5
-  _osc1Pitch: 0.05999999865889549
+  _osc1Pitch: 0
   _osc2Pitch: 0
-  _osc1Tone: 1
-  _osc2Tone: 1
+  _osc1Tone: 0.06599999964237213
+  _osc2Tone: 0.06599999964237213
 --- !u!95 &1910418866
 Animator:
   serializedVersion: 3
@@ -4347,20 +4347,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1923927371}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfa8cd35b4bbfbf4fab719d4b12b4cef, type: 3}
+  m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _basicMode: 1
-  _lfoCycleMultiplier: 8.130000114440918
-  _scaleInterval: 5
-  _octave: 4
+  _lfoCycleMultiplier: 1.590000033378601
+  _scaleInterval: 3
+  _octave: 5
   _mainVolume: 1
   _osc1Volume: 0.5
   _osc2Volume: 0.5
-  _osc1Pitch: 11.949999809265137
+  _osc1Pitch: 3.0999999046325684
   _osc2Pitch: 0
-  _osc1Tone: 0.6729999780654907
-  _osc2Tone: 0.6729999780654907
+  _osc1Tone: 1
+  _osc2Tone: 1
 --- !u!95 &1923927374
 Animator:
   serializedVersion: 3
@@ -4491,20 +4491,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1924701812}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfa8cd35b4bbfbf4fab719d4b12b4cef, type: 3}
+  m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _basicMode: 1
   _lfoCycleMultiplier: 1
   _scaleInterval: 1
-  _octave: 1
+  _octave: 0
   _mainVolume: 1
   _osc1Volume: 0.5
   _osc2Volume: 0.5
-  _osc1Pitch: 0.05999999865889549
+  _osc1Pitch: 12
   _osc2Pitch: 0
-  _osc1Tone: 0.3720000088214874
-  _osc2Tone: 0.3720000088214874
+  _osc1Tone: 0.4959999918937683
+  _osc2Tone: 0.4959999918937683
 --- !u!82 &1924701815
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4721,14 +4721,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1962554293}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60f700d2c68b40b44a257677de749716, type: 3}
+  m_Script: {fileID: 32960973, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _triggerType: 3
   _rootNote: 5
   _scaleMode: 1
-  _frequency: 0.2199999988079071
-  _frequencyChangeTime: 1.3600000143051147
+  _frequency: 0.12999999523162842
+  _frequencyChangeTime: 0.8799999952316284
 --- !u!65 &1962554296
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4778,14 +4778,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1967481225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60f700d2c68b40b44a257677de749716, type: 3}
+  m_Script: {fileID: 32960973, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _triggerType: 3
   _rootNote: 0
   _scaleMode: 5
-  _frequency: 0.4000000059604645
-  _frequencyChangeTime: 2.8499999046325684
+  _frequency: 0.12999999523162842
+  _frequencyChangeTime: 2.2699999809265137
 --- !u!65 &1967481228
 BoxCollider:
   m_ObjectHideFlags: 0
