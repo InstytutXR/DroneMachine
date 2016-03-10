@@ -58,7 +58,10 @@ namespace DerelictComputer.DroneMachine
         {
             if (_triggerType == TriggerType.TriggerEnter)
             {
-                DoTrigger();
+                if (other.CompareTag("Player"))
+                {
+                    DoTrigger();
+                }
             }
         }
 
