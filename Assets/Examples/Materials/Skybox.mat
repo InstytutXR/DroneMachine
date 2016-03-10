@@ -94,7 +94,7 @@ Material:
       data:
         first:
           name: _Exposure
-        second: 1.02
+        second: 1.3
       data:
         first:
           name: _SunDisk
@@ -106,7 +106,7 @@ Material:
       data:
         first:
           name: _AtmosphereThickness
-        second: 0.55
+        second: 0.36
       data:
         first:
           name: _Parallax
@@ -155,7 +155,7 @@ Material:
       data:
         first:
           name: _SkyTint
-        second: {r: 0.8161765, g: 0.39608562, b: 0.39608562, a: 1}
+        second: {r: 0.43382353, g: 0.4039047, b: 0, a: 1}
       data:
         first:
           name: _GroundColor
