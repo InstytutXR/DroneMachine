@@ -662,7 +662,7 @@ MonoBehaviour:
   _triggerType: 3
   _rootNote: 0
   _scaleMode: 5
-  _frequency: 0.12999999523162842
+  _frequency: 0.30000001192092896
   _frequencyChangeTime: 3.880000114440918
 --- !u!65 &386758759
 BoxCollider:
@@ -1322,8 +1322,8 @@ MonoBehaviour:
   _triggerType: 3
   _rootNote: 3
   _scaleMode: 3
-  _frequency: 0.8833333253860474
-  _frequencyChangeTime: 5.820000171661377
+  _frequency: 1.7000000476837158
+  _frequencyChangeTime: 10
 --- !u!65 &503763225
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2327,7 +2327,7 @@ MonoBehaviour:
   _triggerType: 3
   _rootNote: 5
   _scaleMode: 1
-  _frequency: 0.1666666716337204
+  _frequency: 0.2666666805744171
   _frequencyChangeTime: 3.880000114440918
 --- !u!65 &949395619
 BoxCollider:
@@ -5607,7 +5607,7 @@ MonoBehaviour:
   _triggerType: 3
   _rootNote: 0
   _scaleMode: 1
-  _frequency: 0.1666666716337204
+  _frequency: 0.7166666388511658
   _frequencyChangeTime: 3.880000114440918
 --- !u!65 &2040074309
 BoxCollider:
@@ -5665,7 +5665,7 @@ MonoBehaviour:
   _triggerType: 3
   _rootNote: 7
   _scaleMode: 5
-  _frequency: 0.12999999523162842
+  _frequency: 0.5333333611488342
   _frequencyChangeTime: 3.880000114440918
 --- !u!65 &2094943232
 BoxCollider:
