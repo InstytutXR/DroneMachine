@@ -13,39 +13,12 @@ namespace DerelictComputer.DroneMachine
         }
 
         [SerializeField] private TriggerType _triggerType = TriggerType.TriggerEnter;
-        [SerializeField, HideInInspector] private MusicMathUtils.Note _rootNote;
-        [SerializeField, HideInInspector] private MusicMathUtils.ScaleMode _scaleMode;
-        [SerializeField, HideInInspector] private double _frequency = 0.25;
-        [SerializeField, HideInInspector] private double _frequencyChangeTime = 0;
+        [SerializeField] private MusicMathUtils.Note _rootNote;
+        [SerializeField] private MusicMathUtils.ScaleMode _scaleMode;
+        [SerializeField] private double _frequency = 0.25;
+        [SerializeField] private double _frequencyChangeTime = 0;
 
         private Collider _collider;
-
-#if UNITY_EDITOR
-        // properties for editor
-        public MusicMathUtils.Note RootNote
-        {
-            get { return _rootNote; }
-            set { _rootNote = value; }
-        }
-
-        public MusicMathUtils.ScaleMode ScaleMode
-        {
-            get { return _scaleMode; }
-            set { _scaleMode = value; }
-        }
-
-        public float Frequency
-        {
-            get { return (float)_frequency; }
-            set { _frequency = value; }
-        }
-
-        public float FrequencyChangeTime
-        {
-            get { return (float)_frequencyChangeTime; }
-            set { _frequencyChangeTime = value; }
-        }
-#endif
 
         private void Awake()
         {

@@ -6,34 +6,46 @@ namespace DerelictComputer.DroneMachine
     [CustomEditor(typeof(KeyChanger)), CanEditMultipleObjects]
     public class KeyChangerInspector : Editor
     {
+        private SerializedProperty _triggerType;
+        private SerializedProperty _rootNote;
+        private SerializedProperty _scaleMode;
+        private SerializedProperty _frequency;
+        private SerializedProperty _frequencyChangeTime;
+
+        private void OnEnable()
+        {
+            _triggerType = serializedObject.FindProperty("_triggerType");
+            _rootNote = serializedObject.FindProperty("_rootNote");
+            _scaleMode = serializedObject.FindProperty("_scaleMode");
+            _frequency = serializedObject.FindProperty("_frequency");
+            _frequencyChangeTime = serializedObject.FindProperty("_frequencyChangeTime");
+        }
+
         public override void OnInspectorGUI()
         {
-            KeyChanger kc = (KeyChanger) target;
+            serializedObject.Update();
 
-            DrawDefaultInspector();
-
+            EditorGUILayout.PropertyField(_triggerType);
             EditorGUILayout.Space();
+
             EditorGUILayout.LabelField("New Key");
-            kc.RootNote = (MusicMathUtils.Note)EditorGUILayout.EnumPopup("Root Note", kc.RootNote);
-            kc.ScaleMode = (MusicMathUtils.ScaleMode) EditorGUILayout.EnumPopup("Scale Mode", kc.ScaleMode);
-
+            EditorGUILayout.PropertyField(_rootNote);
+            EditorGUILayout.PropertyField(_scaleMode);
             EditorGUILayout.Space();
+
             EditorGUILayout.LabelField("New Frequency/Tempo");
-            float freq = kc.Frequency;
-            
+            float freq = (float)_frequency.doubleValue;
             freq = EditorGUILayout.Slider("Frequency (Hz)", freq, 0.125f, 8f);
             freq = EditorGUILayout.Slider("Tempo (BPM)", freq*60f, 7.5f, 480f)/60f;
-
             if (GUI.changed)
             {
-                kc.Frequency = freq;
+                _frequency.doubleValue = freq;
             }
-
-            kc.FrequencyChangeTime = EditorGUILayout.Slider("Slide Duration", kc.FrequencyChangeTime, 0f, 10f);
+            EditorGUILayout.Slider(_frequencyChangeTime, 0f, 10f);
 
             if (GUI.changed)
             {
-                EditorUtility.SetDirty(target);
+                serializedObject.ApplyModifiedProperties();
             }
         }
     }
