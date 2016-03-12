@@ -6,6 +6,7 @@ namespace DerelictComputer.DroneMachine
     [RequireComponent(typeof(AudioSource))]
     public class DroneSynth : MonoBehaviour
     {
+        public string PresetId = null;
         [SerializeField] private bool _basicMode = true;
         [SerializeField] private double _lfoCycleMultiplier = 1;
         [SerializeField] private int _scaleInterval = 1;
@@ -24,21 +25,56 @@ namespace DerelictComputer.DroneMachine
         private double _sampleDuration;
         private double _lfoPhaseIncrement;
         private double _targetFrequency;
+        private MusicMathUtils.Note _lastRootNote;
+        private MusicMathUtils.ScaleMode _lastScaleMode;
+        private double _lastLfoFrequency;
 
         public double LfoPhase { get; private set; }
+
+        public void RefreshLfoFrequency()
+        {
+            SetLfoFrequency(_lastLfoFrequency);
+        }
 
         public void SetLfoFrequency(double frequency)
         {
             _lfoPhaseIncrement = frequency*_sampleDuration/_lfoCycleMultiplier;
+            _lastLfoFrequency = frequency;
+        }
+
+        public void RefreshKeyAndScaleMode()
+        {
+            SetKeyAndScaleMode(_lastRootNote, _lastScaleMode);
         }
 
         public void SetKeyAndScaleMode(MusicMathUtils.Note rootNote, MusicMathUtils.ScaleMode scaleMode)
         {
             _targetFrequency = MusicMathUtils.ScaleIntervalToFrequency(_scaleInterval, rootNote, scaleMode, _octave);
+            _lastRootNote = rootNote;
+            _lastScaleMode = scaleMode;
+        }
+
+        public void ApplyPreset(DroneSynthPresets.Preset preset)
+        {
+            if (preset == null)
+            {
+                return;
+            }
+
+            _basicMode = preset.BasicMode;
+            _mainVolume = preset.MainVolume;
+            _osc1Volume = preset.Osc1Volume;
+            _osc2Volume = preset.Osc2Volume;
+            _osc1Pitch = preset.Osc1Pitch;
+            _osc2Pitch = preset.Osc2Pitch;
+            _osc1Tone = preset.Osc1Tone;
+            _osc2Tone = preset.Osc2Tone;
         }
 
         private void Start()
         {
+            ApplyPreset(DroneSynthPresets.Instance.GetPresetById(PresetId));
+
             LfoPhase = 0;
             _sampleDuration = 1.0/AudioSettings.outputSampleRate;
 
