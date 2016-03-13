@@ -83,7 +83,7 @@ namespace DerelictComputer.DroneMachine
         {
             foreach (var preset in _presets)
             {
-                if (preset.Id == id)
+                if (preset.Id.Equals(id))
                 {
                     return preset;
                 }
@@ -104,14 +104,14 @@ namespace DerelictComputer.DroneMachine
 
         public bool PresetIsDummy(string id)
         {
-            if (_presets.Count <= 1 || _presets[0].Id == id)
+            if (_presets.Count <= 1 || _presets[0].Id.Equals(id))
             {
                 return true;
             }
 
             for (int i = 1; i < _presets.Count; i++)
             {
-                if (_presets[i].Id == id)
+                if (_presets[i].Id.Equals(id))
                 {
                     return false;
                 }
@@ -159,7 +159,7 @@ namespace DerelictComputer.DroneMachine
         {
             foreach (var preset in _presets)
             {
-                if (preset.Id == id)
+                if (preset.Id.Equals(id))
                 {
                     _presets.Remove(preset);
                     return;

@@ -1,4 +1,5 @@
 ﻿using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 namespace DerelictComputer.DroneMachine
@@ -123,6 +124,8 @@ namespace DerelictComputer.DroneMachine
                         ((DroneSynth) o).PresetId = DroneSynthPresets.Instance.GetPresetByIndex(0).Id;
                     }
 
+                    EditorSceneManager.MarkAllScenesDirty();
+
                     lastPresetIdx = 0;
                 }
 
@@ -137,6 +140,8 @@ namespace DerelictComputer.DroneMachine
                         {
                             ((DroneSynth)o).PresetId = DroneSynthPresets.Instance.GetPresetByIndex(0).Id;
                         }
+
+                        EditorSceneManager.MarkAllScenesDirty();
                     }
                     else
                     {
@@ -146,6 +151,8 @@ namespace DerelictComputer.DroneMachine
                             ds1.ApplyPreset(currentPreset);
                             ds1.PresetId = currentPreset.Id;
                         }
+
+                        EditorSceneManager.MarkAllScenesDirty();
                     }
                 }
 
@@ -215,6 +222,8 @@ namespace DerelictComputer.DroneMachine
                     {
                         ((DroneSynth)o).RefreshKeyAndScaleMode();
                     }
+
+                    EditorSceneManager.MarkAllScenesDirty();
                 }
             }
             else
@@ -233,12 +242,15 @@ namespace DerelictComputer.DroneMachine
                     {
                         ((DroneSynth)o).RefreshKeyAndScaleMode();
                     }
+
+                    EditorSceneManager.MarkAllScenesDirty();
                 }
             }
 
             if (GUI.changed)
             {
                 serializedObject.ApplyModifiedProperties();
+                EditorSceneManager.MarkAllScenesDirty();
             }
         }
     }

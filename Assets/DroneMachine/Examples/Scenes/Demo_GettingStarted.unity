@@ -126,6 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PresetId: ea6145ed-3ce0-4738-b1a6-82118a6b64e6
   _basicMode: 1
   _lfoCycleMultiplier: 1
   _scaleInterval: 3
@@ -135,8 +136,8 @@ MonoBehaviour:
   _osc2Volume: 0.5
   _osc1Pitch: 0
   _osc2Pitch: 0
-  _osc1Tone: 0.5
-  _osc2Tone: 0.5
+  _osc1Tone: 0
+  _osc2Tone: 0
 --- !u!82 &19183888
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1640,6 +1641,7 @@ MonoBehaviour:
   m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PresetId: ea6145ed-3ce0-4738-b1a6-82118a6b64e6
   _basicMode: 1
   _lfoCycleMultiplier: 2
   _scaleInterval: 5
@@ -1649,8 +1651,8 @@ MonoBehaviour:
   _osc2Volume: 0.5
   _osc1Pitch: 0
   _osc2Pitch: 0
-  _osc1Tone: 0.5
-  _osc2Tone: 0.5
+  _osc1Tone: 0
+  _osc2Tone: 0
 --- !u!82 &670222225
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1766,6 +1768,7 @@ MonoBehaviour:
   m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PresetId: ea6145ed-3ce0-4738-b1a6-82118a6b64e6
   _basicMode: 1
   _lfoCycleMultiplier: 1
   _scaleInterval: 1
@@ -1775,8 +1778,8 @@ MonoBehaviour:
   _osc2Volume: 0.5
   _osc1Pitch: 0
   _osc2Pitch: 0
-  _osc1Tone: 0.5
-  _osc2Tone: 0.5
+  _osc1Tone: 0
+  _osc2Tone: 0
 --- !u!82 &716587055
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2178,6 +2181,7 @@ MonoBehaviour:
   m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PresetId: ea6145ed-3ce0-4738-b1a6-82118a6b64e6
   _basicMode: 1
   _lfoCycleMultiplier: 1
   _scaleInterval: 1
@@ -2187,8 +2191,8 @@ MonoBehaviour:
   _osc2Volume: 0.5
   _osc1Pitch: 0
   _osc2Pitch: 0
-  _osc1Tone: 0.5
-  _osc2Tone: 0.5
+  _osc1Tone: 0
+  _osc2Tone: 0
 --- !u!82 &890801056
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3044,6 +3048,7 @@ MonoBehaviour:
   m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PresetId: ea6145ed-3ce0-4738-b1a6-82118a6b64e6
   _basicMode: 1
   _lfoCycleMultiplier: 0.5
   _scaleInterval: 3
@@ -3053,8 +3058,8 @@ MonoBehaviour:
   _osc2Volume: 0.5
   _osc1Pitch: 0
   _osc2Pitch: 0
-  _osc1Tone: 0.5
-  _osc2Tone: 0.5
+  _osc1Tone: 0
+  _osc2Tone: 0
 --- !u!82 &1113421832
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3931,6 +3936,7 @@ MonoBehaviour:
   m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PresetId: 37a929a6-7e21-4613-92ba-29a69dcb00f3
   _basicMode: 1
   _lfoCycleMultiplier: 0.699999988079071
   _scaleInterval: 3
@@ -3938,10 +3944,10 @@ MonoBehaviour:
   _mainVolume: 1
   _osc1Volume: 0.5
   _osc2Volume: 0.5
-  _osc1Pitch: 0.05000000074505806
+  _osc1Pitch: 11.899999618530273
   _osc2Pitch: 0
-  _osc1Tone: 0.5989999771118164
-  _osc2Tone: 0.5989999771118164
+  _osc1Tone: 1
+  _osc2Tone: 1
 --- !u!82 &1444579508
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4490,6 +4496,7 @@ MonoBehaviour:
   m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PresetId: 969c58c2-3dc8-41b5-8715-4dd931d3db6b
   _basicMode: 1
   _lfoCycleMultiplier: 2.069999933242798
   _scaleInterval: 5
@@ -4497,10 +4504,10 @@ MonoBehaviour:
   _mainVolume: 1
   _osc1Volume: 0.5
   _osc2Volume: 0.5
-  _osc1Pitch: 4.050000190734863
+  _osc1Pitch: 0.4099999964237213
   _osc2Pitch: 0
-  _osc1Tone: 1
-  _osc2Tone: 1
+  _osc1Tone: 0.781000018119812
+  _osc2Tone: 0.781000018119812
 --- !u!82 &1625787431
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4616,6 +4623,7 @@ MonoBehaviour:
   m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PresetId: ea6145ed-3ce0-4738-b1a6-82118a6b64e6
   _basicMode: 1
   _lfoCycleMultiplier: 1
   _scaleInterval: 5
@@ -4625,8 +4633,8 @@ MonoBehaviour:
   _osc2Volume: 0.5
   _osc1Pitch: 0
   _osc2Pitch: 0
-  _osc1Tone: 0.5
-  _osc2Tone: 0.5
+  _osc1Tone: 0
+  _osc2Tone: 0
 --- !u!82 &1628934559
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5270,6 +5278,7 @@ MonoBehaviour:
   m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PresetId: ea6145ed-3ce0-4738-b1a6-82118a6b64e6
   _basicMode: 1
   _lfoCycleMultiplier: 1
   _scaleInterval: 1
@@ -5279,8 +5288,8 @@ MonoBehaviour:
   _osc2Volume: 0.5
   _osc1Pitch: 0
   _osc2Pitch: 0
-  _osc1Tone: 0.5
-  _osc2Tone: 0.5
+  _osc1Tone: 0
+  _osc2Tone: 0
 --- !u!82 &1905650584
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5711,17 +5720,18 @@ MonoBehaviour:
   m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _basicMode: 1
+  PresetId: a77ed365-b9f4-4e94-af06-c5b712440066
+  _basicMode: 0
   _lfoCycleMultiplier: 0.9399999976158142
   _scaleInterval: 1
   _octave: 1
   _mainVolume: 1
   _osc1Volume: 0.5
-  _osc2Volume: 0.5
-  _osc1Pitch: 11.890000343322754
-  _osc2Pitch: 0
-  _osc1Tone: 0.32199999690055847
-  _osc2Tone: 0.32199999690055847
+  _osc2Volume: 1
+  _osc1Pitch: -12
+  _osc2Pitch: 11.789999961853027
+  _osc1Tone: 0.9369999766349792
+  _osc2Tone: 0.3019999861717224
 --- !u!82 &1981238872
 AudioSource:
   m_ObjectHideFlags: 0
