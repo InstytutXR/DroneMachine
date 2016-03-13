@@ -102,6 +102,24 @@ namespace DerelictComputer.DroneMachine
             return _presets[index];
         }
 
+        public bool PresetIsDummy(string id)
+        {
+            if (_presets.Count <= 1 || _presets[0].Id == id)
+            {
+                return true;
+            }
+
+            for (int i = 1; i < _presets.Count; i++)
+            {
+                if (_presets[i].Id == id)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
         public int GetPresetIndex(Preset preset)
         {
             for (int i = 0; i < _presets.Count; i++)

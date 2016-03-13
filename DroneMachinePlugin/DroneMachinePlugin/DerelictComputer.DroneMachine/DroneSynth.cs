@@ -73,7 +73,10 @@ namespace DerelictComputer.DroneMachine
 
         private void Start()
         {
-            ApplyPreset(DroneSynthPresets.Instance.GetPresetById(PresetId));
+            if (!DroneSynthPresets.Instance.PresetIsDummy(PresetId))
+            {
+                ApplyPreset(DroneSynthPresets.Instance.GetPresetById(PresetId));
+            }
 
             LfoPhase = 0;
             _sampleDuration = 1.0/AudioSettings.outputSampleRate;
