@@ -1,0 +1,280 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA426A2F1CA9B5DE00EE9AC2 /* DroneSynth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA426A271CA9B5DE00EE9AC2 /* DroneSynth.cpp */; };
+		FA426A301CA9B5DE00EE9AC2 /* DroneSynthPluginInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA426A291CA9B5DE00EE9AC2 /* DroneSynthPluginInterface.cpp */; };
+		FA426A311CA9B5DE00EE9AC2 /* WavetableOscillator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA426A2B1CA9B5DE00EE9AC2 /* WavetableOscillator.cpp */; };
+		FA426A321CA9B5DE00EE9AC2 /* WavetableSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA426A2D1CA9B5DE00EE9AC2 /* WavetableSet.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FA426A1E1CA9B5AF00EE9AC2 /* DroneSynthNative.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DroneSynthNative.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA426A211CA9B5B000EE9AC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA426A271CA9B5DE00EE9AC2 /* DroneSynth.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DroneSynth.cpp; path = ../../VS2015/DroneSynthNative/DroneSynthNative/DroneSynth.cpp; sourceTree = "<group>"; };
+		FA426A281CA9B5DE00EE9AC2 /* DroneSynth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DroneSynth.h; path = ../../VS2015/DroneSynthNative/DroneSynthNative/DroneSynth.h; sourceTree = "<group>"; };
+		FA426A291CA9B5DE00EE9AC2 /* DroneSynthPluginInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DroneSynthPluginInterface.cpp; path = ../../VS2015/DroneSynthNative/DroneSynthNative/DroneSynthPluginInterface.cpp; sourceTree = "<group>"; };
+		FA426A2A1CA9B5DE00EE9AC2 /* Wavetable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Wavetable.h; path = ../../VS2015/DroneSynthNative/DroneSynthNative/Wavetable.h; sourceTree = "<group>"; };
+		FA426A2B1CA9B5DE00EE9AC2 /* WavetableOscillator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WavetableOscillator.cpp; path = ../../VS2015/DroneSynthNative/DroneSynthNative/WavetableOscillator.cpp; sourceTree = "<group>"; };
+		FA426A2C1CA9B5DE00EE9AC2 /* WavetableOscillator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WavetableOscillator.h; path = ../../VS2015/DroneSynthNative/DroneSynthNative/WavetableOscillator.h; sourceTree = "<group>"; };
+		FA426A2D1CA9B5DE00EE9AC2 /* WavetableSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WavetableSet.cpp; path = ../../VS2015/DroneSynthNative/DroneSynthNative/WavetableSet.cpp; sourceTree = "<group>"; };
+		FA426A2E1CA9B5DE00EE9AC2 /* WavetableSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WavetableSet.h; path = ../../VS2015/DroneSynthNative/DroneSynthNative/WavetableSet.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA426A1B1CA9B5AF00EE9AC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA426A151CA9B5AF00EE9AC2 = {
+			isa = PBXGroup;
+			children = (
+				FA426A271CA9B5DE00EE9AC2 /* DroneSynth.cpp */,
+				FA426A281CA9B5DE00EE9AC2 /* DroneSynth.h */,
+				FA426A291CA9B5DE00EE9AC2 /* DroneSynthPluginInterface.cpp */,
+				FA426A2A1CA9B5DE00EE9AC2 /* Wavetable.h */,
+				FA426A2B1CA9B5DE00EE9AC2 /* WavetableOscillator.cpp */,
+				FA426A2C1CA9B5DE00EE9AC2 /* WavetableOscillator.h */,
+				FA426A2D1CA9B5DE00EE9AC2 /* WavetableSet.cpp */,
+				FA426A2E1CA9B5DE00EE9AC2 /* WavetableSet.h */,
+				FA426A201CA9B5AF00EE9AC2 /* DroneSynthNative */,
+				FA426A1F1CA9B5AF00EE9AC2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA426A1F1CA9B5AF00EE9AC2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA426A1E1CA9B5AF00EE9AC2 /* DroneSynthNative.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA426A201CA9B5AF00EE9AC2 /* DroneSynthNative */ = {
+			isa = PBXGroup;
+			children = (
+				FA426A211CA9B5B000EE9AC2 /* Info.plist */,
+			);
+			path = DroneSynthNative;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA426A1D1CA9B5AF00EE9AC2 /* DroneSynthNative */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA426A241CA9B5B000EE9AC2 /* Build configuration list for PBXNativeTarget "DroneSynthNative" */;
+			buildPhases = (
+				FA426A1A1CA9B5AF00EE9AC2 /* Sources */,
+				FA426A1B1CA9B5AF00EE9AC2 /* Frameworks */,
+				FA426A1C1CA9B5AF00EE9AC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DroneSynthNative;
+			productName = DroneSynthNative;
+			productReference = FA426A1E1CA9B5AF00EE9AC2 /* DroneSynthNative.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA426A161CA9B5AF00EE9AC2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Derelict Computer";
+				TargetAttributes = {
+					FA426A1D1CA9B5AF00EE9AC2 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = FA426A191CA9B5AF00EE9AC2 /* Build configuration list for PBXProject "DroneSynthNative" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FA426A151CA9B5AF00EE9AC2;
+			productRefGroup = FA426A1F1CA9B5AF00EE9AC2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA426A1D1CA9B5AF00EE9AC2 /* DroneSynthNative */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA426A1C1CA9B5AF00EE9AC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA426A1A1CA9B5AF00EE9AC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA426A321CA9B5DE00EE9AC2 /* WavetableSet.cpp in Sources */,
+				FA426A301CA9B5DE00EE9AC2 /* DroneSynthPluginInterface.cpp in Sources */,
+				FA426A311CA9B5DE00EE9AC2 /* WavetableOscillator.cpp in Sources */,
+				FA426A2F1CA9B5DE00EE9AC2 /* DroneSynth.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FA426A221CA9B5B000EE9AC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FA426A231CA9B5B000EE9AC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FA426A251CA9B5B000EE9AC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = DroneSynthNative/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_BUNDLE_IDENTIFIER = derelictcomputer.DroneSynthNative;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		FA426A261CA9B5B000EE9AC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = DroneSynthNative/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_BUNDLE_IDENTIFIER = derelictcomputer.DroneSynthNative;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA426A191CA9B5AF00EE9AC2 /* Build configuration list for PBXProject "DroneSynthNative" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA426A221CA9B5B000EE9AC2 /* Debug */,
+				FA426A231CA9B5B000EE9AC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA426A241CA9B5B000EE9AC2 /* Build configuration list for PBXNativeTarget "DroneSynthNative" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA426A251CA9B5B000EE9AC2 /* Debug */,
+				FA426A261CA9B5B000EE9AC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA426A161CA9B5AF00EE9AC2 /* Project object */;
+}
