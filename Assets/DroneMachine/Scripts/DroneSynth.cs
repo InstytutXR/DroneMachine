@@ -50,13 +50,6 @@ namespace DerelictComputer.DroneMachine
         private static extern void DroneSynth_Delete(IntPtr droneSynth);
 
         [DllImport("DroneSynthNative")]
-        private static extern int DroneSynth_AddWavetableSet(IntPtr droneSynth);
-
-        [DllImport("DroneSynthNative")]
-        private static extern void DroneSynth_AddWavetableToSet(IntPtr droneSynth, int wtSetIdx, double topFreq,
-            float[] samples, int numSamples);
-
-        [DllImport("DroneSynthNative")]
         private static extern void DroneSynth_SetMainVolume(IntPtr droneSynth, float volume);
 
         [DllImport("DroneSynthNative")]
@@ -118,18 +111,8 @@ namespace DerelictComputer.DroneMachine
         {
             DroneMachine.Instance.RegisterDroneSynth(this);
 
+            WavetableSet.Load();
             _droneSynthPtr = DroneSynth_New(1.0/AudioSettings.outputSampleRate);
-
-            foreach (var wavetableSet in WavetableSet.GetWavetableSets())
-            {
-                int wtsIdx = DroneSynth_AddWavetableSet(_droneSynthPtr);
-
-                for (int i = 0; i < wavetableSet.Wavetables.Length; i++)
-                {
-                    WavetableSet.Wavetable wt = wavetableSet.Wavetables[i];
-                    DroneSynth_AddWavetableToSet(_droneSynthPtr, wtsIdx, wt.TopFrequency, wt.Table, wt.Table.Length);
-                }
-            }
 
             double baseFrequency = MusicMathUtils.ScaleIntervalToFrequency(ScaleInterval, _rootNote, _scaleMode, Octave);
 
@@ -166,6 +149,7 @@ namespace DerelictComputer.DroneMachine
         {
             DroneSynth_Delete(_droneSynthPtr);
             _droneSynthPtr = IntPtr.Zero;
+            WavetableSet.Unload();
         }
 
         private void OnValidate()

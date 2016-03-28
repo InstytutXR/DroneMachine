@@ -21,24 +21,11 @@ WavetableOscillator::~WavetableOscillator()
 {
 }
 
-void WavetableOscillator::Init(double sampleDuration)
+void WavetableOscillator::Init(double sampleDuration, WavetableSet *wavetableSets, int numWavetableSets)
 {
 	_sampleDuration = sampleDuration;
-}
-
-int WavetableOscillator::AddWavetableSet()
-{
-	if (_numWavetableSets >= WAVETABLEOSCILLATOR_MAX_WAVETABLESETS)
-	{
-		return -1;
-	}
-
-	return _numWavetableSets++;
-}
-
-void WavetableOscillator::AddWavetableToSet(int wtsIdx, double topFreq, float *samples, int numSamples)
-{
-	_wavetableSets[wtsIdx].AddWavetable(topFreq, samples, numSamples);
+	_wavetableSets = wavetableSets;
+	_numWavetableSets = numWavetableSets;
 }
 
 void WavetableOscillator::SetFrequency(double frequency)

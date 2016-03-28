@@ -18,24 +18,11 @@ DroneSynth::~DroneSynth()
 {
 }
 
-void DroneSynth::Init(double sampleDuration)
+void DroneSynth::Init(double sampleDuration, WavetableSet *wavetableSets, int numWavetableSets)
 {
 	_sampleDuration = sampleDuration;
-	_osc1.Init(sampleDuration);
-	_osc2.Init(sampleDuration);
-}
-
-int DroneSynth::AddWavetableSet()
-{
-	int idx = _osc1.AddWavetableSet();
-	_osc2.AddWavetableSet();
-	return idx;
-}
-
-void DroneSynth::AddWavetableToSet(int wtsIdx, double topFreq, float *samples, int numSamples)
-{
-	_osc1.AddWavetableToSet(wtsIdx, topFreq, samples, numSamples);
-	_osc2.AddWavetableToSet(wtsIdx, topFreq, samples, numSamples);
+	_osc1.Init(sampleDuration, wavetableSets, numWavetableSets);
+	_osc2.Init(sampleDuration, wavetableSets, numWavetableSets);
 }
 
 void DroneSynth::SetMainVolume(float volume)

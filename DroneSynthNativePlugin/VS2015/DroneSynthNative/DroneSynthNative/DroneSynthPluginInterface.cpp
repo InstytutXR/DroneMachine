@@ -3,28 +3,38 @@
 
 #define EXPORT_API __declspec(dllexport)
 
+WavetableSet *_wavetableSets;
+int _numWavetableSets;
+
 extern "C"
 {
+	EXPORT_API void WavetableSet_CreateArray(int numWavetableSets)
+	{
+		_wavetableSets = new WavetableSet[numWavetableSets];
+		_numWavetableSets = numWavetableSets;
+	}
+
+	EXPORT_API void WavetableSet_FreeArray()
+	{
+		delete[] _wavetableSets;
+		_numWavetableSets = 0;
+	}
+
+	EXPORT_API void WavetableSet_AddWavetable(int wavetableSetIdx, double topFreq, float *samples, int numSamples)
+	{
+		_wavetableSets[wavetableSetIdx].AddWavetable(topFreq, samples, numSamples);
+	}
+
 	EXPORT_API DroneSynth *DroneSynth_New(double sampleDuration)
 	{
 		DroneSynth *ds = new DroneSynth();
-		ds->Init(sampleDuration);
+		ds->Init(sampleDuration, _wavetableSets, _numWavetableSets);
 		return ds;
 	}
 
 	EXPORT_API void DroneSynth_Delete(DroneSynth *droneSynth)
 	{
 		delete droneSynth;
-	}
-
-	EXPORT_API int DroneSynth_AddWavetableSet(DroneSynth *droneSynth)
-	{
-		return droneSynth->AddWavetableSet();
-	}
-
-	EXPORT_API void  DroneSynth_AddWavetableToSet(DroneSynth *droneSynth, int wtSetIdx, double topFreq, float *samples, int numSamples)
-	{
-		droneSynth->AddWavetableToSet(wtSetIdx, topFreq, samples, numSamples);
 	}
 
 	EXPORT_API void DroneSynth_SetMainVolume(DroneSynth *droneSynth, float volume)

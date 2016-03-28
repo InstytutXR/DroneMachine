@@ -8,11 +8,7 @@ public:
 
 	~DroneSynth();
 
-	void Init(double sampleDuration);
-
-	int AddWavetableSet();
-
-	void AddWavetableToSet(int wtsIdx, double topFreq, float *samples, int numSamples);
+	void Init(double sampleDuration, WavetableSet *wavetableSets, int numWavetableSets);
 
 	void SetMainVolume(float volume);
 

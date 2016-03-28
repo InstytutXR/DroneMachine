@@ -1,8 +1,6 @@
 #pragma once
 #include "WavetableSet.h"
 
-#define WAVETABLEOSCILLATOR_MAX_WAVETABLESETS 8
-
 class WavetableOscillator
 {
 public:
@@ -10,11 +8,7 @@ public:
 	
 	~WavetableOscillator();
 
-	void Init(double sampleDuration);
-
-	int AddWavetableSet();
-
-	void AddWavetableToSet(int wtsIdx, double topFreq, float *samples, int numSamples);
+	void Init(double sampleDuration, WavetableSet *wavetableSets, int numWavetableSets);
 
 	void SetFrequency(double frequency);
 
@@ -24,7 +18,7 @@ public:
 private:
 	void RefreshWavetables();
 
-	WavetableSet _wavetableSets[WAVETABLEOSCILLATOR_MAX_WAVETABLESETS];
+	WavetableSet *_wavetableSets;
 	int _numWavetableSets;
 	double _sampleDuration;
 	double _phase;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
@@ -28,6 +29,8 @@ namespace DerelictComputer.DroneMachine
 
         private static WavetableSet[] _allWavetableSets;
 
+        private static int _loadCount = 0;
+
         public readonly Wavetable[] Wavetables;
 
         public WavetableSet(Wavetable[] wavetables)
@@ -35,11 +38,17 @@ namespace DerelictComputer.DroneMachine
             Wavetables = wavetables;
         }
 
-        /// <summary>
-        /// Retrieve the wavetable sets from StreamingAssets, and cache them for future retrievals
-        /// </summary>
-        /// <returns>the WavetableSet collection</returns>
-        public static WavetableSet[] GetWavetableSets()
+        [DllImport("DroneSynthNative")]
+        private static extern void WavetableSet_CreateArray(int numWavetableSets);
+
+        [DllImport("DroneSynthNative")]
+        private static extern void WavetableSet_FreeArray();
+
+        [DllImport("DroneSynthNative")]
+        private static extern void WavetableSet_AddWavetable(int wavetableSetIdx, double topFreq, [In] float[] samples,
+            int numSamples);
+
+        public static void Load()
         {
             if (_allWavetableSets == null)
             {
@@ -53,14 +62,36 @@ namespace DerelictComputer.DroneMachine
                 catch (Exception)
                 {
                     Debug.LogWarning("No wavetable data yet. Make it via the editor menu!");
-                    return null;
+                    return;
                 }
 
                 _allWavetableSets = (WavetableSet[]) formatter.Deserialize(file);
                 file.Close();
+
+                WavetableSet_CreateArray(_allWavetableSets.Length);
+
+                for (int i = 0; i < _allWavetableSets.Length; i++)
+                {
+                    for (int j = 0; j < _allWavetableSets[i].Wavetables.Length; j++)
+                    {
+                        Wavetable wt = _allWavetableSets[i].Wavetables[j];
+                        WavetableSet_AddWavetable(i, wt.TopFrequency, wt.Table, wt.Table.Length);
+                    }
+                }
             }
 
-            return _allWavetableSets;
+            _loadCount++;
+        }
+
+        public static void Unload()
+        {
+            if (--_loadCount > 0)
+            {
+                return;
+            }
+
+            WavetableSet_FreeArray();
+            _allWavetableSets = null;
         }
     }
 }
