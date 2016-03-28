@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
-
+/*
 namespace DerelictComputer.DroneMachine
 {
     [CustomEditor(typeof(DroneSynth)), CanEditMultipleObjects]
@@ -254,4 +254,4 @@ namespace DerelictComputer.DroneMachine
             }
         }
     }
-}
+}*/

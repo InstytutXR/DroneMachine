@@ -123,21 +123,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 19183885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 44a989d45ef36034db805d91950a24ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PresetId: ea6145ed-3ce0-4738-b1a6-82118a6b64e6
-  _basicMode: 1
-  _lfoCycleMultiplier: 1
-  _scaleInterval: 3
-  _octave: 3
-  _mainVolume: 1
-  _osc1Volume: 0.5
-  _osc2Volume: 0.5
-  _osc1Pitch: 0
-  _osc2Pitch: 0
-  _osc1Tone: 0
-  _osc2Tone: 0
+  LfoCycleMultiplier: 1
+  ScaleInterval: 3
+  Octave: 4
+  MainVolume: 1
+  Osc1Volume: 0.5
+  Osc1Pitch: 0
+  Osc1WavetableAmount: 0.8629999756813049
+  Osc2Volume: 0.5
+  Osc2Pitch: 0.10999999940395355
+  Osc2WavetableAmount: 0.871999979019165
 --- !u!82 &19183888
 AudioSource:
   m_ObjectHideFlags: 0
@@ -480,6 +478,7 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -927,6 +926,7 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -1029,6 +1029,7 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -1638,21 +1639,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 670222222}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 44a989d45ef36034db805d91950a24ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PresetId: ea6145ed-3ce0-4738-b1a6-82118a6b64e6
-  _basicMode: 1
-  _lfoCycleMultiplier: 2
-  _scaleInterval: 5
-  _octave: 2
-  _mainVolume: 1
-  _osc1Volume: 0.5
-  _osc2Volume: 0.5
-  _osc1Pitch: 0
-  _osc2Pitch: 0
-  _osc1Tone: 0
-  _osc2Tone: 0
+  LfoCycleMultiplier: 1.5199999809265137
+  ScaleInterval: 5
+  Octave: 2
+  MainVolume: 1
+  Osc1Volume: 0.5
+  Osc1Pitch: 0
+  Osc1WavetableAmount: 0.08299999684095383
+  Osc2Volume: 0.5
+  Osc2Pitch: 0.10000000149011612
+  Osc2WavetableAmount: 0.09099999815225601
 --- !u!82 &670222225
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1765,21 +1764,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 716587052}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 44a989d45ef36034db805d91950a24ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PresetId: ea6145ed-3ce0-4738-b1a6-82118a6b64e6
-  _basicMode: 1
-  _lfoCycleMultiplier: 1
-  _scaleInterval: 1
-  _octave: 1
-  _mainVolume: 1
-  _osc1Volume: 0.5
-  _osc2Volume: 0.5
-  _osc1Pitch: 0
-  _osc2Pitch: 0
-  _osc1Tone: 0
-  _osc2Tone: 0
+  LfoCycleMultiplier: 1
+  ScaleInterval: 1
+  Octave: 1
+  MainVolume: 1
+  Osc1Volume: 0.5
+  Osc1Pitch: 0
+  Osc1WavetableAmount: 0.057999998331069946
+  Osc2Volume: 0.5
+  Osc2Pitch: -0.10000000149011612
+  Osc2WavetableAmount: 0.9210000038146973
 --- !u!82 &716587055
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2137,6 +2134,7 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -2178,21 +2176,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 890801053}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 44a989d45ef36034db805d91950a24ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PresetId: ea6145ed-3ce0-4738-b1a6-82118a6b64e6
-  _basicMode: 1
-  _lfoCycleMultiplier: 1
-  _scaleInterval: 1
-  _octave: 1
-  _mainVolume: 1
-  _osc1Volume: 0.5
-  _osc2Volume: 0.5
-  _osc1Pitch: 0
-  _osc2Pitch: 0
-  _osc1Tone: 0
-  _osc2Tone: 0
+  LfoCycleMultiplier: 1
+  ScaleInterval: 1
+  Octave: 1
+  MainVolume: 1
+  Osc1Volume: 0.5
+  Osc1Pitch: 0
+  Osc1WavetableAmount: 0.057999998331069946
+  Osc2Volume: 0.5
+  Osc2Pitch: -0.10000000149011612
+  Osc2WavetableAmount: 0.9210000038146973
 --- !u!82 &890801056
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3045,21 +3041,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1113421829}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 44a989d45ef36034db805d91950a24ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PresetId: ea6145ed-3ce0-4738-b1a6-82118a6b64e6
-  _basicMode: 1
-  _lfoCycleMultiplier: 0.5
-  _scaleInterval: 3
-  _octave: 3
-  _mainVolume: 1
-  _osc1Volume: 0.5
-  _osc2Volume: 0.5
-  _osc1Pitch: 0
-  _osc2Pitch: 0
-  _osc1Tone: 0
-  _osc2Tone: 0
+  LfoCycleMultiplier: 3.75
+  ScaleInterval: 3
+  Octave: 4
+  MainVolume: 1
+  Osc1Volume: 0.5
+  Osc1Pitch: 0
+  Osc1WavetableAmount: 0.8629999756813049
+  Osc2Volume: 0.5
+  Osc2Pitch: 0.10999999940395355
+  Osc2WavetableAmount: 0.871999979019165
 --- !u!82 &1113421832
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3933,21 +3927,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1444579505}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 44a989d45ef36034db805d91950a24ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PresetId: 37a929a6-7e21-4613-92ba-29a69dcb00f3
-  _basicMode: 1
-  _lfoCycleMultiplier: 0.699999988079071
-  _scaleInterval: 3
-  _octave: 3
-  _mainVolume: 1
-  _osc1Volume: 0.5
-  _osc2Volume: 0.5
-  _osc1Pitch: 11.899999618530273
-  _osc2Pitch: 0
-  _osc1Tone: 1
-  _osc2Tone: 1
+  LfoCycleMultiplier: 5.059999942779541
+  ScaleInterval: 3
+  Octave: 4
+  MainVolume: 1
+  Osc1Volume: 0.5
+  Osc1Pitch: 0.10000000149011612
+  Osc1WavetableAmount: 0.6850000023841858
+  Osc2Volume: 0.5
+  Osc2Pitch: -12
+  Osc2WavetableAmount: 0.871999979019165
 --- !u!82 &1444579508
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4148,7 +4140,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1498917559}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 32960973, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 34e611cdab615eb4da8dd876f4b36972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _triggerType: 2
@@ -4266,7 +4258,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1513882427}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 32960973, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 34e611cdab615eb4da8dd876f4b36972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _triggerType: 2
@@ -4452,6 +4444,7 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -4493,21 +4486,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1625787428}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 44a989d45ef36034db805d91950a24ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PresetId: 969c58c2-3dc8-41b5-8715-4dd931d3db6b
-  _basicMode: 1
-  _lfoCycleMultiplier: 2.069999933242798
-  _scaleInterval: 5
-  _octave: 2
-  _mainVolume: 1
-  _osc1Volume: 0.5
-  _osc2Volume: 0.5
-  _osc1Pitch: 0.4099999964237213
-  _osc2Pitch: 0
-  _osc1Tone: 0.781000018119812
-  _osc2Tone: 0.781000018119812
+  LfoCycleMultiplier: 3.619999885559082
+  ScaleInterval: 5
+  Octave: 2
+  MainVolume: 1
+  Osc1Volume: 0.5
+  Osc1Pitch: 0
+  Osc1WavetableAmount: 0
+  Osc2Volume: 0.5
+  Osc2Pitch: 0.10000000149011612
+  Osc2WavetableAmount: 0.9079999923706055
 --- !u!82 &1625787431
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4620,21 +4611,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1628934556}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 44a989d45ef36034db805d91950a24ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PresetId: ea6145ed-3ce0-4738-b1a6-82118a6b64e6
-  _basicMode: 1
-  _lfoCycleMultiplier: 1
-  _scaleInterval: 5
-  _octave: 2
-  _mainVolume: 1
-  _osc1Volume: 0.5
-  _osc2Volume: 0.5
-  _osc1Pitch: 0
-  _osc2Pitch: 0
-  _osc1Tone: 0
-  _osc2Tone: 0
+  LfoCycleMultiplier: 1
+  ScaleInterval: 5
+  Octave: 2
+  MainVolume: 1
+  Osc1Volume: 0.5
+  Osc1Pitch: 0
+  Osc1WavetableAmount: 0.08299999684095383
+  Osc2Volume: 0.5
+  Osc2Pitch: 0.10000000149011612
+  Osc2WavetableAmount: 0.09099999815225601
 --- !u!82 &1628934559
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4745,7 +4734,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1658603604}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 32960973, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 34e611cdab615eb4da8dd876f4b36972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _triggerType: 2
@@ -5100,6 +5089,7 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -5142,14 +5132,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1832193635}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 32960973, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 34e611cdab615eb4da8dd876f4b36972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _triggerType: 3
   _rootNote: 5
   _scaleMode: 1
-  _frequency: 0.5099999904632568
-  _frequencyChangeTime: 1.5700000524520874
+  _frequency: 0.7699999213218689
+  _frequencyChangeTime: 2.440000057220459
 --- !u!65 &1832193638
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5275,21 +5265,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1905650581}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 44a989d45ef36034db805d91950a24ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PresetId: ea6145ed-3ce0-4738-b1a6-82118a6b64e6
-  _basicMode: 1
-  _lfoCycleMultiplier: 1
-  _scaleInterval: 1
-  _octave: 1
-  _mainVolume: 1
-  _osc1Volume: 0.5
-  _osc2Volume: 0.5
-  _osc1Pitch: 0
-  _osc2Pitch: 0
-  _osc1Tone: 0
-  _osc2Tone: 0
+  LfoCycleMultiplier: 1
+  ScaleInterval: 1
+  Octave: 1
+  MainVolume: 1
+  Osc1Volume: 0.5
+  Osc1Pitch: 0
+  Osc1WavetableAmount: 0.057999998331069946
+  Osc2Volume: 0.5
+  Osc2Pitch: -0.10000000149011612
+  Osc2WavetableAmount: 0.9210000038146973
 --- !u!82 &1905650584
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5475,7 +5463,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1938165986}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 32960973, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 34e611cdab615eb4da8dd876f4b36972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _triggerType: 2
@@ -5717,21 +5705,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1981238869}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1285962121, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 44a989d45ef36034db805d91950a24ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PresetId: a77ed365-b9f4-4e94-af06-c5b712440066
-  _basicMode: 0
-  _lfoCycleMultiplier: 0.9399999976158142
-  _scaleInterval: 1
-  _octave: 1
-  _mainVolume: 1
-  _osc1Volume: 0.5
-  _osc2Volume: 1
-  _osc1Pitch: -12
-  _osc2Pitch: 11.789999961853027
-  _osc1Tone: 0.9369999766349792
-  _osc2Tone: 0.3019999861717224
+  LfoCycleMultiplier: 1
+  ScaleInterval: 1
+  Octave: 1
+  MainVolume: 1
+  Osc1Volume: 0.5
+  Osc1Pitch: 0
+  Osc1WavetableAmount: 0.057999998331069946
+  Osc2Volume: 0.5
+  Osc2Pitch: -0.10000000149011612
+  Osc2WavetableAmount: 0.9210000038146973
 --- !u!82 &1981238872
 AudioSource:
   m_ObjectHideFlags: 0
