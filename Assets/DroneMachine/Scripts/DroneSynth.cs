@@ -43,41 +43,89 @@ namespace DerelictComputer.DroneMachine
             }
         }
 
-        [DllImport("DroneSynthNative")]
+		#if !UNITY_EDITOR && UNITY_IOS
+		[DllImport("__Internal")]
+		#else
+		[DllImport("DroneSynthNative")]
+		#endif
         private static extern IntPtr DroneSynth_New(double sampleDuration);
 
-        [DllImport("DroneSynthNative")]
+		#if !UNITY_EDITOR && UNITY_IOS
+		[DllImport("__Internal")]
+		#else
+		[DllImport("DroneSynthNative")]
+		#endif
         private static extern void DroneSynth_Delete(IntPtr droneSynth);
 
-        [DllImport("DroneSynthNative")]
+		#if !UNITY_EDITOR && UNITY_IOS
+		[DllImport("__Internal")]
+		#else
+		[DllImport("DroneSynthNative")]
+		#endif
         private static extern void DroneSynth_SetMainVolume(IntPtr droneSynth, float volume);
 
-        [DllImport("DroneSynthNative")]
+		#if !UNITY_EDITOR && UNITY_IOS
+		[DllImport("__Internal")]
+		#else
+		[DllImport("DroneSynthNative")]
+		#endif
         private static extern void DroneSynth_SetOsc1Volume(IntPtr droneSynth, float volume);
 
-        [DllImport("DroneSynthNative")]
+		#if !UNITY_EDITOR && UNITY_IOS
+		[DllImport("__Internal")]
+		#else
+		[DllImport("DroneSynthNative")]
+		#endif
         private static extern void DroneSynth_SetOsc1TargetFrequency(IntPtr droneSynth, double frequency, bool immediate);
 
-        [DllImport("DroneSynthNative")]
+		#if !UNITY_EDITOR && UNITY_IOS
+		[DllImport("__Internal")]
+		#else
+		[DllImport("DroneSynthNative")]
+		#endif
         private static extern void DroneSynth_SetOsc1WavetableAmount(IntPtr droneSynth, double wtAmt);
 
-        [DllImport("DroneSynthNative")]
+		#if !UNITY_EDITOR && UNITY_IOS
+		[DllImport("__Internal")]
+		#else
+		[DllImport("DroneSynthNative")]
+		#endif
         private static extern void DroneSynth_SetOsc2Volume(IntPtr droneSynth, float volume);
 
-        [DllImport("DroneSynthNative")]
+		#if !UNITY_EDITOR && UNITY_IOS
+		[DllImport("__Internal")]
+		#else
+		[DllImport("DroneSynthNative")]
+		#endif
         private static extern void DroneSynth_SetOsc2TargetFrequency(IntPtr droneSynth, double frequency, bool immediate);
 
-        [DllImport("DroneSynthNative")]
+		#if !UNITY_EDITOR && UNITY_IOS
+		[DllImport("__Internal")]
+		#else
+		[DllImport("DroneSynthNative")]
+		#endif
         private static extern void DroneSynth_SetOsc2WavetableAmount(IntPtr droneSynth, double wtAmt);
 
-        [DllImport("DroneSynthNative")]
+		#if !UNITY_EDITOR && UNITY_IOS
+		[DllImport("__Internal")]
+		#else
+		[DllImport("DroneSynthNative")]
+		#endif
         private static extern void DroneSynth_SetLfoFrequency(IntPtr droneSynth, double frequency);
 
-        [DllImport("DroneSynthNative")]
+		#if !UNITY_EDITOR && UNITY_IOS
+		[DllImport("__Internal")]
+		#else
+		[DllImport("DroneSynthNative")]
+		#endif
         private static extern void DroneSynth_Process(IntPtr droneSynth, [In, Out] float[] buffer, int numSamples,
             int numChannels);
 
-        [DllImport("DroneSynthNative")]
+		#if !UNITY_EDITOR && UNITY_IOS
+		[DllImport("__Internal")]
+		#else
+		[DllImport("DroneSynthNative")]
+		#endif
         private static extern double DroneSynth_GetLfoPhase(IntPtr droneSynth);
 
         public void SetLfoFrequency(double frequency)

@@ -38,13 +38,25 @@ namespace DerelictComputer.DroneMachine
             Wavetables = wavetables;
         }
 
+		#if !UNITY_EDITOR && UNITY_IOS
+		[DllImport("__Internal")]
+		#else
         [DllImport("DroneSynthNative")]
+		#endif
         private static extern void WavetableSet_CreateArray(int numWavetableSets);
 
-        [DllImport("DroneSynthNative")]
+		#if !UNITY_EDITOR && UNITY_IOS
+		[DllImport("__Internal")]
+		#else
+		[DllImport("DroneSynthNative")]
+		#endif
         private static extern void WavetableSet_FreeArray();
 
-        [DllImport("DroneSynthNative")]
+		#if !UNITY_EDITOR && UNITY_IOS
+		[DllImport("__Internal")]
+		#else
+		[DllImport("DroneSynthNative")]
+		#endif
         private static extern void WavetableSet_AddWavetable(int wavetableSetIdx, double topFreq, [In] float[] samples,
             int numSamples);
 
@@ -57,7 +69,7 @@ namespace DerelictComputer.DroneMachine
                 var path = Path.Combine(Application.streamingAssetsPath, WavetableFileName);
                 try
                 {
-                    file = File.Open(path, FileMode.Open);
+					file = File.OpenRead(path);
                 }
                 catch (Exception)
                 {
