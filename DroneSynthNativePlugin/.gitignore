@@ -2,4 +2,5 @@
 *Release/
 *x64/
 *.vs/
-*opensdf
+*.opensdf
+*.sdf
