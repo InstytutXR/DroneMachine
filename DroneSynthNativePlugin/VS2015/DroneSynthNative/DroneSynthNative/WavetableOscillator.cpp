@@ -123,6 +123,13 @@ float WavetableOscillator::GetSample()
 	// if we don't have a second wavetable set, just return the sample from the first wavetable
 	if (_wtsIdx2 == -1 || _wtIdx2 == -1)
 	{
+		_phase += _phaseInc;
+
+		while (_phase > 1.0)
+		{
+			_phase -= 1.0;
+		}
+
 		return (float)s2;
 	}
 
