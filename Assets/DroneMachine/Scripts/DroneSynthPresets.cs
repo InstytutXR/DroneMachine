@@ -13,7 +13,6 @@ namespace DerelictComputer.DroneMachine
         {
             public readonly string Id;
             public string Name;
-            public bool BasicMode;
             public float MainVolume;
             public float Osc1Volume;
             public float Osc2Volume;
@@ -54,7 +53,7 @@ namespace DerelictComputer.DroneMachine
             var path = Path.Combine(Application.streamingAssetsPath, PresetFileName);
             try
             {
-                file = File.Open(path, FileMode.Open);
+                file = File.OpenRead(path);
             }
             catch (Exception)
             {

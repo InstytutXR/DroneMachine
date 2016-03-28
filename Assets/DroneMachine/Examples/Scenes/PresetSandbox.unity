@@ -277,21 +277,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1359014831}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18939c31ede6e904dae0cabd11e26b18, type: 3}
+  m_Script: {fileID: 11500000, guid: 44a989d45ef36034db805d91950a24ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PresetId: 12784e08-0ddf-464a-a303-ad76eb09e10a
-  _basicMode: 1
-  _lfoCycleMultiplier: 1
-  _scaleInterval: 1
-  _octave: 1
-  _mainVolume: 1
-  _osc1Volume: 0.5
-  _osc2Volume: 0.5
-  _osc1Pitch: 0.10000000149011612
-  _osc2Pitch: 0
-  _osc1Tone: 0.5
-  _osc2Tone: 0.5
+  LfoCycleMultiplier: 1
+  ScaleInterval: 1
+  Octave: 0
+  MainVolume: 1
+  Osc1Volume: 0.5
+  Osc1Pitch: 0
+  Osc1WavetableAmount: 0.5
+  Osc2Volume: 0.5
+  Osc2Pitch: 0
+  Osc2WavetableAmount: 0.5
+  PresetId: 42b0399f-861f-49f3-aed2-9c0a361e4e84
 --- !u!82 &1359014834
 AudioSource:
   m_ObjectHideFlags: 0

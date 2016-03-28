@@ -7,9 +7,12 @@ namespace DerelictComputer.DroneMachine
     [RequireComponent(typeof(AudioSource))]
     public class DroneSynth : MonoBehaviour
     {
+        [Header("Musical Settings")]
         [Range(0.125f, 16f)] public double LfoCycleMultiplier = 1;
         [Range(1, 7)] public int ScaleInterval = 1;
         [Range(0, 8)] public int Octave = 0;
+
+        [Header("Synth Settings")]
         [Range(0f, 1f)] public float MainVolume = 1;
         [Range(0f, 1f)] public float Osc1Volume = 0.5f;
         [Range(-12f, 12f)] public double Osc1Pitch = 0;
@@ -17,6 +20,8 @@ namespace DerelictComputer.DroneMachine
         [Range(0f, 1f)] public float Osc2Volume = 0.5f;
         [Range(-12f, 12f)] public double Osc2Pitch = 0;
         [Range(0f, 1f)] public double Osc2WavetableAmount = 0.5;
+
+        [HideInInspector] public string PresetId;
 
         private IntPtr _droneSynthPtr = IntPtr.Zero;
 
@@ -34,6 +39,8 @@ namespace DerelictComputer.DroneMachine
         private float _osc2Volume;
         private double _osc2Pitch;
         private double _osc2WavetableAmount;
+
+        private string _presetId;
 
         public double LfoPhase
         {
@@ -155,6 +162,25 @@ namespace DerelictComputer.DroneMachine
             DroneSynth_SetOsc2TargetFrequency(_droneSynthPtr, baseFrequency * MusicMathUtils.SemitonesToPitch(Osc2Pitch), false);
         }
 
+        public void ApplyPreset()
+        {
+            if (string.IsNullOrEmpty(PresetId) || DroneSynthPresets.Instance.PresetIsDummy(PresetId))
+            {
+                return;
+            }
+
+            var preset = DroneSynthPresets.Instance.GetPresetById(PresetId);
+            MainVolume = preset.MainVolume;
+            Osc1Volume = preset.Osc1Volume;
+            Osc2Volume = preset.Osc2Volume;
+            Osc1Pitch = preset.Osc1Pitch;
+            Osc2Pitch = preset.Osc2Pitch;
+            Osc1WavetableAmount = preset.Osc1Tone;
+            Osc2WavetableAmount = preset.Osc2Tone;
+            _presetId = PresetId;
+            OnValidate();
+        }
+
         private void OnEnable()
         {
             DroneMachine.Instance.RegisterDroneSynth(this);
@@ -162,27 +188,37 @@ namespace DerelictComputer.DroneMachine
             WavetableSet.Load();
             _droneSynthPtr = DroneSynth_New(1.0/AudioSettings.outputSampleRate);
 
-            double baseFrequency = MusicMathUtils.ScaleIntervalToFrequency(ScaleInterval, _rootNote, _scaleMode, Octave);
+            if (string.IsNullOrEmpty(PresetId) || DroneSynthPresets.Instance.PresetIsDummy(PresetId))
+            {
+                double baseFrequency = MusicMathUtils.ScaleIntervalToFrequency(ScaleInterval, _rootNote, _scaleMode,
+                    Octave);
 
-            DroneSynth_SetMainVolume(_droneSynthPtr, MainVolume);
-            DroneSynth_SetOsc1Volume(_droneSynthPtr, Osc1Volume);
-            DroneSynth_SetOsc1TargetFrequency(_droneSynthPtr, baseFrequency * MusicMathUtils.SemitonesToPitch(Osc1Pitch), true);
-            DroneSynth_SetOsc1WavetableAmount(_droneSynthPtr, Osc1WavetableAmount);
-            DroneSynth_SetOsc2Volume(_droneSynthPtr, Osc2Volume);
-            DroneSynth_SetOsc2TargetFrequency(_droneSynthPtr, baseFrequency * MusicMathUtils.SemitonesToPitch(Osc2Pitch), true);
-            DroneSynth_SetOsc2WavetableAmount(_droneSynthPtr, Osc2WavetableAmount);
-            DroneSynth_SetLfoFrequency(_droneSynthPtr, _mainLfoFrequency / LfoCycleMultiplier);
+                DroneSynth_SetMainVolume(_droneSynthPtr, MainVolume);
+                DroneSynth_SetOsc1Volume(_droneSynthPtr, Osc1Volume);
+                DroneSynth_SetOsc1TargetFrequency(_droneSynthPtr,
+                    baseFrequency*MusicMathUtils.SemitonesToPitch(Osc1Pitch), true);
+                DroneSynth_SetOsc1WavetableAmount(_droneSynthPtr, Osc1WavetableAmount);
+                DroneSynth_SetOsc2Volume(_droneSynthPtr, Osc2Volume);
+                DroneSynth_SetOsc2TargetFrequency(_droneSynthPtr,
+                    baseFrequency*MusicMathUtils.SemitonesToPitch(Osc2Pitch), true);
+                DroneSynth_SetOsc2WavetableAmount(_droneSynthPtr, Osc2WavetableAmount);
+                DroneSynth_SetLfoFrequency(_droneSynthPtr, _mainLfoFrequency/LfoCycleMultiplier);
 
-            _lfoCycleMultiplier = LfoCycleMultiplier;
-            _scaleInterval = ScaleInterval;
-            _octave = Octave;
-            _mainVolume = MainVolume;
-            _osc1Volume = Osc1Volume;
-            _osc1Pitch = Osc1Pitch;
-            _osc1WavetableAmount = Osc1WavetableAmount;
-            _osc2Volume = Osc2Volume;
-            _osc2Pitch = Osc2Pitch;
-            _osc2WavetableAmount = Osc2WavetableAmount;
+                _lfoCycleMultiplier = LfoCycleMultiplier;
+                _scaleInterval = ScaleInterval;
+                _octave = Octave;
+                _mainVolume = MainVolume;
+                _osc1Volume = Osc1Volume;
+                _osc1Pitch = Osc1Pitch;
+                _osc1WavetableAmount = Osc1WavetableAmount;
+                _osc2Volume = Osc2Volume;
+                _osc2Pitch = Osc2Pitch;
+                _osc2WavetableAmount = Osc2WavetableAmount;
+            }
+            else
+            {
+                ApplyPreset();
+            }
 
             // create a dummy clip and start playing it so 3d positioning works
             var dummyClip = AudioClip.Create("dummyclip", 1, 1, AudioSettings.outputSampleRate, false);
@@ -269,6 +305,11 @@ namespace DerelictComputer.DroneMachine
             {
                 _osc2WavetableAmount = Osc2WavetableAmount;
                 DroneSynth_SetOsc2WavetableAmount(_droneSynthPtr, _osc2WavetableAmount);
+            }
+
+            if (PresetId != _presetId)
+            {
+                ApplyPreset();
             }
         }
 
