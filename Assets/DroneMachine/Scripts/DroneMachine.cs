@@ -52,6 +52,14 @@ namespace DerelictComputer.DroneMachine
             synth.SetLfoFrequency(_currentFrequency);
         }
 
+        public void UnregisterDroneSynth(DroneSynth synth)
+        {
+            if (_synths.Contains(synth))
+            {
+                _synths.Remove(synth);
+            }
+        }
+
         /// <summary>
         /// Set the key for any DroneSynths registered to this DroneMachine
         /// </summary>
