@@ -21,6 +21,10 @@
  *   out of or in connection with the Software or the use or other dealings in the
  *   Software.
  */
+
+/*
+Minor changes made to port this to C# and work the way I needed it to. -CH
+*/
 using System;
 using UnityEngine;
 
