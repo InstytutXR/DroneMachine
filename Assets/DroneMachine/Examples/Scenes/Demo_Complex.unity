@@ -13,7 +13,7 @@ SceneSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 6
+  serializedVersion: 7
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -37,12 +37,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1581158069}
+  m_IndirectSpecularColor: {r: 0.24710035, g: 0.3110525, b: 0.25524664, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 6
+  serializedVersion: 7
   m_GIWorkflowMode: 0
-  m_LightmapsMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -53,17 +53,22 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
-    serializedVersion: 3
+    serializedVersion: 4
     m_Resolution: 2
     m_BakeResolution: 40
     m_TextureWidth: 1024
     m_TextureHeight: 1024
+    m_AO: 0
     m_AOMaxDistance: 1
-    m_Padding: 2
     m_CompAOExponent: 0
+    m_CompAOExponentDirect: 0
+    m_Padding: 2
     m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
     m_TextureCompression: 1
+    m_DirectLightInLightProbes: 1
     m_FinalGather: 0
+    m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 1024
     m_ReflectionCompression: 2
   m_LightingDataAsset: {fileID: 0}
@@ -111,6 +116,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 15}
   m_LocalScale: {x: 8, y: 2, z: 8}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 746061933}
   m_RootOrder: 3
@@ -122,7 +128,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 12719598}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 32960973, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 34e611cdab615eb4da8dd876f4b36972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _triggerType: 3
@@ -166,6 +172,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1006878079}
   - {fileID: 1403927876}
@@ -200,6 +207,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -15, y: 1, z: 0}
   m_LocalScale: {x: 8, y: 2, z: 8}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 746061933}
   m_RootOrder: 4
@@ -211,7 +219,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 99989209}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 32960973, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 34e611cdab615eb4da8dd876f4b36972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _triggerType: 3
@@ -259,6 +267,7 @@ Transform:
   m_LocalRotation: {x: 0.3535534, y: 0.3535534, z: -0.14644663, w: 0.85355335}
   m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1264516501}
   m_RootOrder: 0
@@ -285,17 +294,20 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: e70581a6912dc1040b937abe0d2ac00c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -349,6 +361,7 @@ Transform:
   m_LocalRotation: {x: 0.3535534, y: 0.3535534, z: -0.14644663, w: 0.85355335}
   m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 816616264}
   m_RootOrder: 0
@@ -375,17 +388,20 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: e70581a6912dc1040b937abe0d2ac00c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -469,6 +485,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -499,6 +516,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -20, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 429708069}
   m_Father: {fileID: 1652622196}
@@ -514,9 +532,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a989d45ef36034db805d91950a24ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LfoCycleMultiplier: 1
-  ScaleInterval: 1
-  Octave: 0
+  LfoCycleMultiplier: 2.700000047683716
+  ScaleInterval: 7
+  Octave: 3
   MainVolume: 1
   Osc1Volume: 0.5
   Osc1Pitch: 0
@@ -524,6 +542,7 @@ MonoBehaviour:
   Osc2Volume: 0.5
   Osc2Pitch: 0
   Osc2WavetableAmount: 0.5
+  PresetId: 
 --- !u!95 &231642060
 Animator:
   serializedVersion: 3
@@ -642,6 +661,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.06, y: 1, z: 0}
   m_LocalScale: {x: 8, y: 2, z: 8}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 746061933}
   m_RootOrder: 5
@@ -653,7 +673,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 312437334}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 32960973, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 34e611cdab615eb4da8dd876f4b36972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _triggerType: 3
@@ -701,6 +721,7 @@ Transform:
   m_LocalRotation: {x: 0.3535534, y: 0.3535534, z: -0.14644663, w: 0.85355335}
   m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 231642058}
   m_RootOrder: 0
@@ -727,17 +748,20 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: e70581a6912dc1040b937abe0d2ac00c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -791,6 +815,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 10, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1924701813}
   m_RootOrder: 0
@@ -817,17 +842,20 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: e70581a6912dc1040b937abe0d2ac00c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -881,6 +909,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 10, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1708647336}
   m_RootOrder: 0
@@ -907,17 +936,20 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: e70581a6912dc1040b937abe0d2ac00c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -970,6 +1002,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 25, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 910480642}
   m_Father: {fileID: 1132766958}
@@ -985,9 +1018,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a989d45ef36034db805d91950a24ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LfoCycleMultiplier: 1
+  LfoCycleMultiplier: 3.700000047683716
   ScaleInterval: 1
-  Octave: 0
+  Octave: 2
   MainVolume: 1
   Osc1Volume: 0.5
   Osc1Pitch: 0
@@ -995,6 +1028,7 @@ MonoBehaviour:
   Osc2Volume: 0.5
   Osc2Pitch: 0
   Osc2WavetableAmount: 0.5
+  PresetId: 
 --- !u!95 &486368977
 Animator:
   serializedVersion: 3
@@ -1112,6 +1146,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 746061933}
   m_RootOrder: 0
@@ -1123,7 +1158,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 496850972}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 32960973, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 34e611cdab615eb4da8dd876f4b36972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _triggerType: 1
@@ -1158,6 +1193,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 20, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1503917405}
   m_Father: {fileID: 1652622196}
@@ -1173,9 +1209,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a989d45ef36034db805d91950a24ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LfoCycleMultiplier: 1
-  ScaleInterval: 1
-  Octave: 0
+  LfoCycleMultiplier: 2.200000047683716
+  ScaleInterval: 3
+  Octave: 3
   MainVolume: 1
   Osc1Volume: 0.5
   Osc1Pitch: 0
@@ -1183,6 +1219,7 @@ MonoBehaviour:
   Osc2Volume: 0.5
   Osc2Pitch: 0
   Osc2WavetableAmount: 0.5
+  PresetId: 
 --- !u!95 &503047710
 Animator:
   serializedVersion: 3
@@ -1303,6 +1340,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 10, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 666074369}
   m_RootOrder: 0
@@ -1329,17 +1367,20 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: e70581a6912dc1040b937abe0d2ac00c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -1391,6 +1432,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1927940073}
   m_RootOrder: 1
@@ -1468,6 +1510,7 @@ Transform:
   m_LocalRotation: {x: 0.3535534, y: 0.3535534, z: -0.14644663, w: 0.85355335}
   m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1031744616}
   m_RootOrder: 0
@@ -1494,17 +1537,20 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: e70581a6912dc1040b937abe0d2ac00c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -1556,6 +1602,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 519130948}
   m_Father: {fileID: 1403927876}
@@ -1581,6 +1628,7 @@ MonoBehaviour:
   Osc2Volume: 0.5
   Osc2Pitch: 0
   Osc2WavetableAmount: 0.5
+  PresetId: 
 --- !u!82 &666074371
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1680,6 +1728,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 496850973}
   - {fileID: 1967481226}
@@ -1717,6 +1766,7 @@ Transform:
   m_LocalRotation: {x: 0.3535534, y: 0.3535534, z: -0.14644663, w: 0.85355335}
   m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1910418864}
   m_RootOrder: 0
@@ -1743,17 +1793,20 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: e70581a6912dc1040b937abe0d2ac00c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -1806,6 +1859,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 203586827}
   m_Father: {fileID: 1766743185}
@@ -1821,9 +1875,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a989d45ef36034db805d91950a24ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LfoCycleMultiplier: 1
+  LfoCycleMultiplier: 9.600000381469727
   ScaleInterval: 1
-  Octave: 0
+  Octave: 6
   MainVolume: 1
   Osc1Volume: 0.5
   Osc1Pitch: 0
@@ -1831,6 +1885,7 @@ MonoBehaviour:
   Osc2Volume: 0.5
   Osc2Pitch: 0
   Osc2WavetableAmount: 0.5
+  PresetId: 
 --- !u!95 &816616266
 Animator:
   serializedVersion: 3
@@ -1951,6 +2006,7 @@ Transform:
   m_LocalRotation: {x: 0.3535534, y: 0.3535534, z: -0.14644663, w: 0.85355335}
   m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 2, y: 4, z: 2}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 486368975}
   m_RootOrder: 0
@@ -1977,17 +2033,20 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: e70581a6912dc1040b937abe0d2ac00c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -2096,6 +2155,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.605, z: 0.193}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 2032081104}
   m_RootOrder: 0
@@ -2127,6 +2187,7 @@ Transform:
   m_LocalRotation: {x: 0.3535534, y: 0.3535534, z: -0.14644663, w: 0.85355335}
   m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1808174384}
   m_RootOrder: 0
@@ -2153,17 +2214,20 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: e70581a6912dc1040b937abe0d2ac00c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -2216,17 +2280,20 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: f818ed2a0751d844db824dfb8a9ad2f9, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -2261,6 +2328,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 16360063}
   m_RootOrder: 0
@@ -2291,6 +2359,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 25}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1452713047}
   m_Father: {fileID: 1132766958}
@@ -2306,9 +2375,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a989d45ef36034db805d91950a24ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LfoCycleMultiplier: 1
+  LfoCycleMultiplier: 3.700000047683716
   ScaleInterval: 1
-  Octave: 0
+  Octave: 2
   MainVolume: 1
   Osc1Volume: 0.5
   Osc1Pitch: 0
@@ -2316,6 +2385,7 @@ MonoBehaviour:
   Osc2Volume: 0.5
   Osc2Pitch: 0
   Osc2WavetableAmount: 0.5
+  PresetId: 
 --- !u!95 &1012908755
 Animator:
   serializedVersion: 3
@@ -2435,6 +2505,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -25}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1172431294}
   m_Father: {fileID: 1132766958}
@@ -2450,9 +2521,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a989d45ef36034db805d91950a24ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LfoCycleMultiplier: 1
-  ScaleInterval: 1
-  Octave: 0
+  LfoCycleMultiplier: 5.599999904632568
+  ScaleInterval: 5
+  Octave: 2
   MainVolume: 1
   Osc1Volume: 0.5
   Osc1Pitch: 0
@@ -2460,6 +2531,7 @@ MonoBehaviour:
   Osc2Volume: 0.5
   Osc2Pitch: 0
   Osc2WavetableAmount: 0.5
+  PresetId: 
 --- !u!95 &1018386858
 Animator:
   serializedVersion: 3
@@ -2578,6 +2650,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1927940073}
   m_RootOrder: 0
@@ -2652,6 +2725,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 651054835}
   m_Father: {fileID: 1652622196}
@@ -2667,9 +2741,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a989d45ef36034db805d91950a24ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LfoCycleMultiplier: 1
-  ScaleInterval: 1
-  Octave: 0
+  LfoCycleMultiplier: 2.200000047683716
+  ScaleInterval: 3
+  Octave: 3
   MainVolume: 1
   Osc1Volume: 0.5
   Osc1Pitch: 0
@@ -2677,6 +2751,7 @@ MonoBehaviour:
   Osc2Volume: 0.5
   Osc2Pitch: 0
   Osc2WavetableAmount: 0.5
+  PresetId: 
 --- !u!95 &1031744618
 Animator:
   serializedVersion: 3
@@ -2793,6 +2868,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 486368975}
   - {fileID: 1344348647}
@@ -2828,6 +2904,7 @@ Transform:
   m_LocalRotation: {x: 0.3535534, y: 0.3535534, z: -0.14644663, w: 0.85355335}
   m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 2, y: 4, z: 2}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1018386856}
   m_RootOrder: 0
@@ -2854,17 +2931,20 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: e70581a6912dc1040b937abe0d2ac00c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -2917,6 +2997,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 8.37, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 121591746}
   m_Father: {fileID: 1766743185}
@@ -2932,9 +3013,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a989d45ef36034db805d91950a24ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LfoCycleMultiplier: 1
+  LfoCycleMultiplier: 9.600000381469727
   ScaleInterval: 1
-  Octave: 0
+  Octave: 6
   MainVolume: 1
   Osc1Volume: 0.5
   Osc1Pitch: 0
@@ -2942,6 +3023,7 @@ MonoBehaviour:
   Osc2Volume: 0.5
   Osc2Pitch: 0
   Osc2WavetableAmount: 0.5
+  PresetId: 
 --- !u!95 &1264516503
 Animator:
   serializedVersion: 3
@@ -3060,6 +3142,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 2032081104}
   m_RootOrder: 1
@@ -3072,17 +3155,20 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -3122,6 +3208,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1908941578}
   m_Father: {fileID: 1403927876}
@@ -3147,6 +3234,7 @@ MonoBehaviour:
   Osc2Volume: 0.5
   Osc2Pitch: 0
   Osc2WavetableAmount: 0.5
+  PresetId: 
 --- !u!82 &1303317328
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3249,6 +3337,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -25, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1987653872}
   m_Father: {fileID: 1132766958}
@@ -3264,9 +3353,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a989d45ef36034db805d91950a24ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LfoCycleMultiplier: 1
-  ScaleInterval: 1
-  Octave: 0
+  LfoCycleMultiplier: 5.599999904632568
+  ScaleInterval: 5
+  Octave: 2
   MainVolume: 1
   Osc1Volume: 0.5
   Osc1Pitch: 0
@@ -3274,6 +3363,7 @@ MonoBehaviour:
   Osc2Volume: 0.5
   Osc2Pitch: 0
   Osc2WavetableAmount: 0.5
+  PresetId: 
 --- !u!95 &1344348649
 Animator:
   serializedVersion: 3
@@ -3390,6 +3480,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1924701813}
   - {fileID: 1303317326}
@@ -3425,6 +3516,7 @@ Transform:
   m_LocalRotation: {x: 0.3535534, y: 0.3535534, z: -0.14644663, w: 0.85355335}
   m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 2, y: 4, z: 2}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1012908753}
   m_RootOrder: 0
@@ -3451,17 +3543,20 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: e70581a6912dc1040b937abe0d2ac00c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -3515,6 +3610,7 @@ Transform:
   m_LocalRotation: {x: 0.3535534, y: 0.3535534, z: -0.14644663, w: 0.85355335}
   m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 503047708}
   m_RootOrder: 0
@@ -3541,17 +3637,20 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: e70581a6912dc1040b937abe0d2ac00c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -3600,7 +3699,7 @@ Light:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1581158068}
   m_Enabled: 1
-  serializedVersion: 6
+  serializedVersion: 7
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2.32
@@ -3610,6 +3709,7 @@ Light:
   m_Shadows:
     m_Type: 2
     m_Resolution: -1
+    m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.05
     m_NormalBias: 0.4
@@ -3622,10 +3722,10 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
-  m_AreaSize: {x: 1, y: 1}
 --- !u!4 &1581158070
 Transform:
   m_ObjectHideFlags: 0
@@ -3635,6 +3735,7 @@ Transform:
   m_LocalRotation: {x: 0.40821794, y: -0.23456973, z: 0.109381676, w: 0.87542605}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -3662,6 +3763,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0.25997373, z: 0, w: 0.96561575}
   m_LocalPosition: {x: 0, y: 6.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 503047708}
   - {fileID: 231642058}
@@ -3695,6 +3797,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 477696938}
   m_Father: {fileID: 1403927876}
@@ -3720,6 +3823,7 @@ MonoBehaviour:
   Osc2Volume: 0.5
   Osc2Pitch: 0
   Osc2WavetableAmount: 0.5
+  PresetId: 
 --- !u!82 &1708647338
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3819,6 +3923,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0.12663247, z: 0, w: 0.99194974}
   m_LocalPosition: {x: 0, y: 12.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 816616264}
   - {fileID: 1910418864}
@@ -3853,6 +3958,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 8.37, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 982246349}
   m_Father: {fileID: 1766743185}
@@ -3868,9 +3974,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a989d45ef36034db805d91950a24ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LfoCycleMultiplier: 1
-  ScaleInterval: 1
-  Octave: 0
+  LfoCycleMultiplier: 10.899999618530273
+  ScaleInterval: 5
+  Octave: 6
   MainVolume: 1
   Osc1Volume: 0.5
   Osc1Pitch: 0
@@ -3878,6 +3984,7 @@ MonoBehaviour:
   Osc2Volume: 0.5
   Osc2Pitch: 0
   Osc2WavetableAmount: 0.5
+  PresetId: 
 --- !u!95 &1808174386
 Animator:
   serializedVersion: 3
@@ -3998,6 +4105,7 @@ Transform:
   m_LocalRotation: {x: 0.3535534, y: 0.3535534, z: -0.14644663, w: 0.85355335}
   m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1923927372}
   m_RootOrder: 0
@@ -4024,17 +4132,20 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: e70581a6912dc1040b937abe0d2ac00c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -4088,6 +4199,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 10, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1303317326}
   m_RootOrder: 0
@@ -4114,17 +4226,20 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: e70581a6912dc1040b937abe0d2ac00c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -4177,6 +4292,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 774828721}
   m_Father: {fileID: 1766743185}
@@ -4192,9 +4308,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a989d45ef36034db805d91950a24ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LfoCycleMultiplier: 1
-  ScaleInterval: 1
-  Octave: 0
+  LfoCycleMultiplier: 10.899999618530273
+  ScaleInterval: 5
+  Octave: 6
   MainVolume: 1
   Osc1Volume: 0.5
   Osc1Pitch: 0
@@ -4202,6 +4318,7 @@ MonoBehaviour:
   Osc2Volume: 0.5
   Osc2Pitch: 0
   Osc2WavetableAmount: 0.5
+  PresetId: 
 --- !u!95 &1910418866
 Animator:
   serializedVersion: 3
@@ -4321,6 +4438,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1836660676}
   m_Father: {fileID: 1652622196}
@@ -4336,9 +4454,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a989d45ef36034db805d91950a24ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LfoCycleMultiplier: 1
-  ScaleInterval: 1
-  Octave: 0
+  LfoCycleMultiplier: 2.700000047683716
+  ScaleInterval: 7
+  Octave: 3
   MainVolume: 1
   Osc1Volume: 0.5
   Osc1Pitch: 0
@@ -4346,6 +4464,7 @@ MonoBehaviour:
   Osc2Volume: 0.5
   Osc2Pitch: 0
   Osc2WavetableAmount: 0.5
+  PresetId: 
 --- !u!95 &1923927374
 Animator:
   serializedVersion: 3
@@ -4464,6 +4583,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 465573428}
   m_Father: {fileID: 1403927876}
@@ -4489,6 +4609,7 @@ MonoBehaviour:
   Osc2Volume: 0.5
   Osc2Pitch: 0
   Osc2WavetableAmount: 0.5
+  PresetId: 
 --- !u!82 &1924701815
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4648,6 +4769,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1025134932}
   - {fileID: 647555537}
@@ -4695,6 +4817,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 15, y: 1, z: 0}
   m_LocalScale: {x: 8, y: 2, z: 8}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 746061933}
   m_RootOrder: 2
@@ -4706,7 +4829,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1962554293}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 32960973, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 34e611cdab615eb4da8dd876f4b36972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _triggerType: 3
@@ -4752,6 +4875,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -15}
   m_LocalScale: {x: 8, y: 2, z: 8}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 746061933}
   m_RootOrder: 1
@@ -4763,7 +4887,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1967481225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 32960973, guid: f59de1e739c8bb34d92b098dddbc9eb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 34e611cdab615eb4da8dd876f4b36972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _triggerType: 3
@@ -4811,6 +4935,7 @@ Transform:
   m_LocalRotation: {x: 0.3535534, y: 0.3535534, z: -0.14644663, w: 0.85355335}
   m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 2, y: 4, z: 2}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1344348647}
   m_RootOrder: 0
@@ -4837,17 +4962,20 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: e70581a6912dc1040b937abe0d2ac00c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -4917,6 +5045,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0.29384965, z: 0, w: 0.9558517}
   m_LocalPosition: {x: -9.78, y: 1, z: -17.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 925514928}
   - {fileID: 1272051459}
